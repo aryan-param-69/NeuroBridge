@@ -1,0 +1,6 @@
+[Parallel(n_jobs=10)]: Using backend LokyBackend with 10 concurrent workers.
+[Parallel(n_jobs=10)]: Done 2 out of 5 | elapsed:  2.1min remaining:  3.1min
+[Parallel(n_jobs=10)]: Done 5 out of 5 | elapsed:  2.1min finished
+MongoDB: connected
+84 development subjects, 21 locked hold-out subjects, 4725 epochs
+  ts_ra_logreg       bal.acc 0.676  auc 0.727  brier 0.224

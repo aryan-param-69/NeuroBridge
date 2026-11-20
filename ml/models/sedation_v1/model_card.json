@@ -1,0 +1,66 @@
+{
+ "name": "sedation_level",
+ "version": "sedation_v1",
+ "status": "staging",
+ "intended_use": "Research and decision SUPPORT: how much does a resting EEG resemble awake vs moderately propofol-sedated EEG of healthy volunteers.",
+ "not_for": [
+  "diagnosis",
+  "detecting consciousness or covert awareness in patients",
+  "measuring recovery",
+  "any clinical decision on its own"
+ ],
+ "training_data": {
+  "dataset": "Chennu et al. 2016, Cambridge repository, DOI 10.17863/CAM.68959, CC BY 2.0 UK",
+  "subjects": 20,
+  "recordings_used": 60,
+  "epochs": 2302,
+  "population": "healthy adults under propofol"
+ },
+ "labels": "sedated = moderate sedation; awake = baseline or recovery; mild sedation not used for training",
+ "model": "xgboost",
+ "features": 74,
+ "channels": [
+  "Fp1",
+  "Fp2",
+  "F7",
+  "F3",
+  "Fz",
+  "F4",
+  "F8",
+  "T7",
+  "C3",
+  "Cz",
+  "C4",
+  "T8",
+  "P7",
+  "P3",
+  "Pz",
+  "P4",
+  "P8",
+  "O1",
+  "O2"
+ ],
+ "epoch_seconds": 10,
+ "validation": {
+  "scheme": "leave-one-subject-out, nested",
+  "balanced_accuracy": 0.9375,
+  "ba_ci95": [
+   0.8625,
+   1.0
+  ],
+  "auc": 0.97,
+  "permutation_p": 0.009900990099009901
+ },
+ "known_limits": [
+  "20 healthy people only; wide intervals",
+  "never validated on patients or on any clinical EEG",
+  "healthy propofol sedation differs from brain injury",
+  "other devices/montages may look unfamiliar to it"
+ ],
+ "software": {
+  "python": "3.12.13",
+  "sklearn": "1.9.1",
+  "mne": "1.13.2"
+ },
+ "model_sha256": "3c2c1b73ebfb9f1e984980ad4f176d8f4198e33a4e4a0b41e35745df169bda6a"
+}

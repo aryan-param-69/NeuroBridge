@@ -1,0 +1,59 @@
+[project]
+name = "neurobridge-backend"
+version = "0.1.0"
+description = "NeuroBridge AI backend (MongoDB)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "email-validator>=2.1",
+  "argon2-cffi>=23.1",
+  "pyjwt>=2.8",
+  "cryptography>=42",
+  "pymongo>=4.8",
+  "mne>=1.8",
+  "numpy>=2.5.5",
+  "scipy>=1.18.1",
+  "edfio>=0.4.18",
+  "pyyaml>=6.0.3",
+  "pywavelets>=1.10.0",
+  "specparam>=2.0.0rc7",
+  "scikit-learn>=1.9.1",
+  "xgboost>=3.4.1",
+  "joblib>=1.6.0",
+  "shap>=0.54.1",
+  "lightgbm>=4.7.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",
+    "ruff>=0.5",
+    "pytest-cov>=5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]  # FastAPI's Depends() in defaults is the documented idiom
+
+[tool.ruff.lint.per-file-ignores]
+"app/eeg/features/catalog.py" = ["E501"]  # plain-language definitions are prose
+"app/services/crsr.py" = ["E501"]  # scale wording is prose
+"app/api/v1/assessments.py" = ["E501"]  # long literal messages
+"app/api/v1/timeline.py" = ["E501"]  # timeline item literals
+"app/api/v1/overview.py" = ["E501"]  # long literals
+"app/api/v1/ai.py" = ["E501"]  # long messages
+"app/api/v1/reports.py" = ["E501"]  # report prose and html template
+"app/services/ai.py" = ["E501"]
+"app/ml/*" = ["E501", "E741", "B905", "UP"]  # vendored from ml/
+"app/api/v1/comparisons.py" = ["E501"]  # long messages
+"tests/**" = ["E501", "F811"]  # F811: fixtures re-exported from test_patients

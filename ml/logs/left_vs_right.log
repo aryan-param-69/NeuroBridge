@@ -1,0 +1,670 @@
+[Parallel(n_jobs=10)]: Using backend LokyBackend with 10 concurrent workers.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00091 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.00091 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.00095 (2.2e-16 eps * 64 dim * 6.7e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00091 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.00095 (2.2e-16 eps * 64 dim * 6.7e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00097 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+    Using tolerance 0.0011 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00098 (2.2e-16 eps * 64 dim * 6.9e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.0012 (2.2e-16 eps * 64 dim * 8.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00095 (2.2e-16 eps * 64 dim * 6.7e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00097 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Computing rank from data with rank=None
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.3e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+    Using tolerance 0.00092 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+Estimating class=1 covariance using LEDOIT_WOLF
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.0011 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+Estimating class=1 covariance using LEDOIT_WOLF
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00089 (2.2e-16 eps * 64 dim * 6.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+    Using tolerance 0.0012 (2.2e-16 eps * 64 dim * 8.4e+10  max singular value)
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00098 (2.2e-16 eps * 64 dim * 6.9e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Reducing data rank from 64 -> 64
+Done.
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Done.
+Computing rank from data with rank=None
+Estimating class=1 covariance using LEDOIT_WOLF
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00097 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00092 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+    Using tolerance 0.0011 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Computing rank from data with rank=None
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00089 (2.2e-16 eps * 64 dim * 6.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+    Using tolerance 0.00098 (2.2e-16 eps * 64 dim * 6.9e+10  max singular value)
+Computing rank from data with rank=None
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Estimating class=1 covariance using LEDOIT_WOLF
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+[Parallel(n_jobs=10)]: Done 36 out of 45 | elapsed:  9.7min remaining:  2.4min
+Computing rank from data with rank=None
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Estimating class=1 covariance using LEDOIT_WOLF
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.0012 (2.2e-16 eps * 64 dim * 8.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00096 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+Done.
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00092 (2.2e-16 eps * 64 dim * 6.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00089 (2.2e-16 eps * 64 dim * 6.2e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Done.
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Computing rank from data with rank=None
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Done.
+Computing rank from data with rank=None
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00096 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+    Using tolerance 0.0011 (2.2e-16 eps * 64 dim * 7.9e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.001 (2.2e-16 eps * 64 dim * 7.4e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+    Using tolerance 0.00096 (2.2e-16 eps * 64 dim * 6.8e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.00094 (2.2e-16 eps * 64 dim * 6.6e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Computing rank from data with rank=None
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+    Using tolerance 0.0012 (2.2e-16 eps * 64 dim * 8.5e+10  max singular value)
+    Estimated rank (data): 64
+    data: rank 64 computed from 64 data channels with 0 projectors
+Reducing data rank from 64 -> 64
+Estimating class=0 covariance using LEDOIT_WOLF
+Done.
+Estimating class=1 covariance using LEDOIT_WOLF
+Done.
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+D:\Sem-7\EegNeuro\ml\.venv\Lib\site-packages\sklearn\svm\_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+[Parallel(n_jobs=10)]: Done 45 out of 45 | elapsed: 20.8min finished
+[Parallel(n_jobs=10)]: Using backend LokyBackend with 10 concurrent workers.
+[Parallel(n_jobs=10)]: Done  52 tasks      | elapsed:  8.9min
+[Parallel(n_jobs=10)]: Done 100 out of 100 | elapsed: 15.2min finished
+MongoDB: connected
+84 development subjects, 21 locked hold-out subjects, 4725 epochs
+  csp_lda            bal.acc 0.588  auc 0.613  brier 0.245
+  logreg             bal.acc 0.586  auc 0.628  brier 0.238
+  svm_rbf            bal.acc 0.573  auc 0.588  brier 0.252
+  random_forest      bal.acc 0.556  auc 0.580  brier 0.245
+  gradient_boosting  bal.acc 0.552  auc 0.584  brier 0.245
+  xgboost            bal.acc 0.563  auc 0.587  brier 0.255
+  lightgbm           bal.acc 0.564  auc 0.586  brier 0.262
+  ts_logreg          bal.acc 0.618  auc 0.661  brier 0.239
+  ts_svm_linear      bal.acc 0.600  auc 0.626  brier 0.241
+selected: ts_logreg | tied with best: ['ts_logreg']
+HOLD-OUT (ts_logreg): bal.acc 0.677, auc 0.731
+permutation: observed 0.618 vs null mean 0.501, p=0.0099

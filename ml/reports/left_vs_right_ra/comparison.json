@@ -1,0 +1,22 @@
+{
+  "base": "ts_logreg",
+  "extra": "ts_ra_logreg",
+  "balanced_accuracy": {
+    "ts_logreg": 0.617722653078366,
+    "ts_ra_logreg": 0.6761360136629616
+  },
+  "brier": {
+    "ts_logreg": 0.23912890609721366,
+    "ts_ra_logreg": 0.22401615308706613
+  },
+  "difference_extra_minus_base": 0.058413360584595564,
+  "difference_ci95": [
+    0.038947465028555006,
+    0.07852363844199478
+  ],
+  "ci_excludes_zero": true,
+  "n_subjects": 84,
+  "subjects_better": 58,
+  "subjects_worse": 17,
+  "status": "EXPLORATORY: judged on development subjects only. The locked hold-out was already used once; confirm on a NEW dataset before relying on this."
+}

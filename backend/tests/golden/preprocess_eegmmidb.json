@@ -1,0 +1,44 @@
+{
+  "S001R01": {
+    "n_channels": 64,
+    "sfreq_hz": 160.0,
+    "n_epochs_total": 60,
+    "n_epochs_kept": 56,
+    "bad_channels": [],
+    "interpolated": [],
+    "dropped": [],
+    "grade": "good",
+    "score": 85.8,
+    "low_confidence": true
+  },
+  "S001R02": {
+    "n_channels": 64,
+    "sfreq_hz": 160.0,
+    "n_epochs_total": 60,
+    "n_epochs_kept": 60,
+    "bad_channels": [],
+    "interpolated": [],
+    "dropped": [],
+    "grade": "good",
+    "score": 90.9,
+    "low_confidence": false
+  },
+  "S002R01": {
+    "n_channels": 64,
+    "sfreq_hz": 160.0,
+    "n_epochs_total": 60,
+    "n_epochs_kept": 60,
+    "bad_channels": [
+      "T7",
+      "T10"
+    ],
+    "interpolated": [
+      "T7",
+      "T10"
+    ],
+    "dropped": [],
+    "grade": "good",
+    "score": 89.5,
+    "low_confidence": false
+  }
+}

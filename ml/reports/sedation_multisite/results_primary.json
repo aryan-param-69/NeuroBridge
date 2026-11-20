@@ -1,0 +1,2259 @@
+{
+ "featureset": "primary",
+ "n_features": 68,
+ "n_people": 40,
+ "n_recordings_primary": 131,
+ "alpha": 0.2,
+ "models": {
+  "logreg": {
+   "balanced_accuracy": 0.962206572769953,
+   "accuracy": 0.9618320610687023,
+   "precision_macro": 0.9611241217798594,
+   "recall_macro": 0.962206572769953,
+   "f1_macro": 0.9616083465213059,
+   "roc_auc": 0.9845070422535211,
+   "brier": 0.04545441419613015,
+   "log_loss": 0.1786181041918205,
+   "ece": 0.07513931145652059,
+   "confusion_matrix": [
+    [
+     58,
+     2
+    ],
+    [
+     3,
+     68
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9175285349954277,
+    0.993421052631579
+   ],
+   "auc_ci95": [
+    0.9631161370798319,
+    0.9990783410138249
+   ]
+  },
+  "svm_rbf": {
+   "balanced_accuracy": 0.9609154929577465,
+   "accuracy": 0.9618320610687023,
+   "precision_macro": 0.9622175141242938,
+   "recall_macro": 0.9609154929577465,
+   "f1_macro": 0.961509079156138,
+   "roc_auc": 0.9859154929577465,
+   "brier": 0.037220445380650016,
+   "log_loss": 0.13649179562769634,
+   "ece": 0.04984936762415784,
+   "confusion_matrix": [
+    [
+     57,
+     3
+    ],
+    [
+     2,
+     69
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9166590073529413,
+    0.9932454954954955
+   ],
+   "auc_ci95": [
+    0.9664366264083758,
+    1.0
+   ]
+  },
+  "random_forest": {
+   "balanced_accuracy": 0.962206572769953,
+   "accuracy": 0.9618320610687023,
+   "precision_macro": 0.9611241217798594,
+   "recall_macro": 0.962206572769953,
+   "f1_macro": 0.9616083465213059,
+   "roc_auc": 0.9842723004694836,
+   "brier": 0.050640620174592865,
+   "log_loss": 0.1997771703648126,
+   "ece": 0.10186383728261626,
+   "confusion_matrix": [
+    [
+     58,
+     2
+    ],
+    [
+     3,
+     68
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9175285349954277,
+    0.993421052631579
+   ],
+   "auc_ci95": [
+    0.9629800998789345,
+    0.9995223310246
+   ]
+  },
+  "gradient_boosting": {
+   "balanced_accuracy": 0.9705399061032863,
+   "accuracy": 0.9694656488549618,
+   "precision_macro": 0.968560074801309,
+   "recall_macro": 0.9705399061032863,
+   "f1_macro": 0.9693208430913349,
+   "roc_auc": 0.9875586854460093,
+   "brier": 0.03473964829888043,
+   "log_loss": 0.13547790082351074,
+   "ece": 0.04496760592102894,
+   "confusion_matrix": [
+    [
+     59,
+     1
+    ],
+    [
+     3,
+     68
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9383561643835616,
+    0.993421052631579
+   ],
+   "auc_ci95": [
+    0.9706135790595513,
+    1.0
+   ]
+  },
+  "xgboost": {
+   "balanced_accuracy": 0.9705399061032863,
+   "accuracy": 0.9694656488549618,
+   "precision_macro": 0.968560074801309,
+   "recall_macro": 0.9705399061032863,
+   "f1_macro": 0.9693208430913349,
+   "roc_auc": 0.9903755868544601,
+   "brier": 0.03312781140244825,
+   "log_loss": 0.12641502647179453,
+   "ece": 0.040212089367501334,
+   "confusion_matrix": [
+    [
+     59,
+     1
+    ],
+    [
+     3,
+     68
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9383561643835616,
+    0.993421052631579
+   ],
+   "auc_ci95": [
+    0.976317496320979,
+    0.9992834965368999
+   ]
+  },
+  "lightgbm": {
+   "balanced_accuracy": 0.9705399061032863,
+   "accuracy": 0.9694656488549618,
+   "precision_macro": 0.968560074801309,
+   "recall_macro": 0.9705399061032863,
+   "f1_macro": 0.9693208430913349,
+   "roc_auc": 0.9915492957746479,
+   "brier": 0.029775889976709137,
+   "log_loss": 0.10848031611895688,
+   "ece": 0.031611214135365044,
+   "confusion_matrix": [
+    [
+     59,
+     1
+    ],
+    [
+     3,
+     68
+    ]
+   ],
+   "n": 131,
+   "ba_ci95": [
+    0.9383561643835616,
+    0.993421052631579
+   ],
+   "auc_ci95": [
+    0.9789942762466961,
+    1.0
+   ]
+  }
+ },
+ "per_site": {
+  "logreg": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.925,
+    "ba_ci95": [
+     0.85,
+     1.0
+    ],
+    "roc_auc": 0.94375,
+    "auc_ci95": [
+     0.8762500000000001,
+     1.0
+    ],
+    "frac_called_sedated": 0.3333333333333333
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 0.9901960784313726,
+    "ba_ci95": [
+     0.9693877551020409,
+     1.0
+    ],
+    "roc_auc": 0.9980392156862745,
+    "auc_ci95": [
+     0.9916666666666667,
+     1.0
+    ],
+    "frac_called_sedated": 0.704225352112676
+   }
+  },
+  "svm_rbf": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.9125000000000001,
+    "ba_ci95": [
+     0.825,
+     0.9875
+    ],
+    "roc_auc": 0.9450000000000001,
+    "auc_ci95": [
+     0.885,
+     1.0
+    ],
+    "frac_called_sedated": 0.35
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 1.0,
+    "ba_ci95": [
+     1.0,
+     1.0
+    ],
+    "roc_auc": 1.0,
+    "auc_ci95": [
+     1.0,
+     1.0
+    ],
+    "frac_called_sedated": 0.7183098591549296
+   }
+  },
+  "random_forest": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.925,
+    "ba_ci95": [
+     0.85,
+     1.0
+    ],
+    "roc_auc": 0.94125,
+    "auc_ci95": [
+     0.88,
+     1.0
+    ],
+    "frac_called_sedated": 0.3333333333333333
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 0.9901960784313726,
+    "ba_ci95": [
+     0.9693877551020409,
+     1.0
+    ],
+    "roc_auc": 1.0,
+    "auc_ci95": [
+     1.0,
+     1.0
+    ],
+    "frac_called_sedated": 0.704225352112676
+   }
+  },
+  "gradient_boosting": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.9375,
+    "ba_ci95": [
+     0.8625,
+     1.0
+    ],
+    "roc_auc": 0.95125,
+    "auc_ci95": [
+     0.8999999999999999,
+     1.0
+    ],
+    "frac_called_sedated": 0.31666666666666665
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 0.9901960784313726,
+    "ba_ci95": [
+     0.9693877551020409,
+     1.0
+    ],
+    "roc_auc": 1.0,
+    "auc_ci95": [
+     1.0,
+     1.0
+    ],
+    "frac_called_sedated": 0.704225352112676
+   }
+  },
+  "xgboost": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.9375,
+    "ba_ci95": [
+     0.8625,
+     1.0
+    ],
+    "roc_auc": 0.9624999999999999,
+    "auc_ci95": [
+     0.91625,
+     1.0
+    ],
+    "frac_called_sedated": 0.31666666666666665
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 0.9901960784313726,
+    "ba_ci95": [
+     0.9693877551020409,
+     1.0
+    ],
+    "roc_auc": 0.9990196078431373,
+    "auc_ci95": [
+     0.9944444444444445,
+     1.0
+    ],
+    "frac_called_sedated": 0.704225352112676
+   }
+  },
+  "lightgbm": {
+   "Cambridge": {
+    "n_recordings": 60,
+    "n_people": 20,
+    "balanced_accuracy": 0.9375,
+    "ba_ci95": [
+     0.8625,
+     1.0
+    ],
+    "roc_auc": 0.96875,
+    "auc_ci95": [
+     0.9299999999999999,
+     1.0
+    ],
+    "frac_called_sedated": 0.31666666666666665
+   },
+   "Oslo": {
+    "n_recordings": 71,
+    "n_people": 20,
+    "balanced_accuracy": 0.9901960784313726,
+    "ba_ci95": [
+     0.9693877551020409,
+     1.0
+    ],
+    "roc_auc": 1.0,
+    "auc_ci95": [
+     1.0,
+     1.0
+    ],
+    "frac_called_sedated": 0.704225352112676
+   }
+  }
+ },
+ "selection": {
+  "best_by_accuracy": "gradient_boosting",
+  "tied": [
+   "logreg",
+   "svm_rbf",
+   "random_forest",
+   "gradient_boosting",
+   "xgboost",
+   "lightgbm"
+  ],
+  "chosen": "lightgbm",
+  "table": [
+   {
+    "model": "logreg",
+    "balanced_accuracy": 0.962206572769953,
+    "brier": 0.04545441419613015,
+    "diff_vs_best": 0.008333333333333304,
+    "diff_ci95": [
+     0.0,
+     0.02631578947368418
+    ],
+    "tied_with_best": true
+   },
+   {
+    "model": "svm_rbf",
+    "balanced_accuracy": 0.9609154929577465,
+    "brier": 0.037220445380650016,
+    "diff_vs_best": 0.009624413145539856,
+    "diff_ci95": [
+     -0.014285714285714346,
+     0.0390625
+    ],
+    "tied_with_best": true
+   },
+   {
+    "model": "random_forest",
+    "balanced_accuracy": 0.962206572769953,
+    "brier": 0.050640620174592865,
+    "diff_vs_best": 0.008333333333333304,
+    "diff_ci95": [
+     0.0,
+     0.02631578947368418
+    ],
+    "tied_with_best": true
+   },
+   {
+    "model": "gradient_boosting",
+    "balanced_accuracy": 0.9705399061032863,
+    "brier": 0.03473964829888043,
+    "diff_vs_best": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "tied_with_best": true
+   },
+   {
+    "model": "xgboost",
+    "balanced_accuracy": 0.9705399061032863,
+    "brier": 0.03312781140244825,
+    "diff_vs_best": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "tied_with_best": true
+   },
+   {
+    "model": "lightgbm",
+    "balanced_accuracy": 0.9705399061032863,
+    "brier": 0.029775889976709137,
+    "diff_vs_best": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "tied_with_best": true
+   }
+  ],
+  "rule": "tied if 95% paired subject-bootstrap CI of (best - model) includes 0; then lowest Brier, then most interpretable, then cheapest"
+ },
+ "chosen": "lightgbm",
+ "cross_site": [
+  {
+   "model": "logreg",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.9411764705882353,
+   "ba_ci95": [
+    0.8874823113207547,
+    0.9818181818181818
+   ],
+   "roc_auc": 0.9950980392156863,
+   "auc_ci95": [
+    0.984,
+    1.0
+   ],
+   "frac_called_sedated": 0.6338028169014085,
+   "frac_called_sedated_if_awake": 0.0,
+   "frac_called_sedated_if_sedated": 0.8823529411764706,
+   "best_params": {
+    "clf__C": 0.01
+   }
+  },
+  {
+   "model": "logreg",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.875,
+   "ba_ci95": [
+    0.775,
+    0.95
+   ],
+   "roc_auc": 0.92875,
+   "auc_ci95": [
+    0.8625,
+    0.98625
+   ],
+   "frac_called_sedated": 0.3,
+   "frac_called_sedated_if_awake": 0.05,
+   "frac_called_sedated_if_sedated": 0.8,
+   "best_params": {
+    "clf__C": 1.0
+   }
+  },
+  {
+   "model": "svm_rbf",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.9607843137254901,
+   "ba_ci95": [
+    0.9239130434782609,
+    0.9905660377358491
+   ],
+   "roc_auc": 0.9990196078431373,
+   "auc_ci95": [
+    0.9946428571428572,
+    1.0
+   ],
+   "frac_called_sedated": 0.6619718309859155,
+   "frac_called_sedated_if_awake": 0.0,
+   "frac_called_sedated_if_sedated": 0.9215686274509803,
+   "best_params": {
+    "clf__C": 1.0
+   }
+  },
+  {
+   "model": "svm_rbf",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.8625,
+   "ba_ci95": [
+    0.7625,
+    0.95
+   ],
+   "roc_auc": 0.9225,
+   "auc_ci95": [
+    0.8537187499999999,
+    0.98375
+   ],
+   "frac_called_sedated": 0.31666666666666665,
+   "frac_called_sedated_if_awake": 0.075,
+   "frac_called_sedated_if_sedated": 0.8,
+   "best_params": {
+    "clf__C": 10.0
+   }
+  },
+  {
+   "model": "random_forest",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.955392156862745,
+   "ba_ci95": [
+    0.8961538461538461,
+    1.0
+   ],
+   "roc_auc": 0.996078431372549,
+   "auc_ci95": [
+    0.9865384615384616,
+    1.0
+   ],
+   "frac_called_sedated": 0.704225352112676,
+   "frac_called_sedated_if_awake": 0.05,
+   "frac_called_sedated_if_sedated": 0.9607843137254902,
+   "best_params": {
+    "max_depth": null,
+    "min_samples_leaf": 1
+   }
+  },
+  {
+   "model": "random_forest",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.875,
+   "ba_ci95": [
+    0.7749999999999999,
+    0.95
+   ],
+   "roc_auc": 0.91625,
+   "auc_ci95": [
+    0.8224999999999999,
+    0.9900312500000003
+   ],
+   "frac_called_sedated": 0.4,
+   "frac_called_sedated_if_awake": 0.15,
+   "frac_called_sedated_if_sedated": 0.9,
+   "best_params": {
+    "max_depth": null,
+    "min_samples_leaf": 1
+   }
+  },
+  {
+   "model": "gradient_boosting",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.9803921568627452,
+   "ba_ci95": [
+    0.95,
+    1.0
+   ],
+   "roc_auc": 0.9931372549019608,
+   "auc_ci95": [
+    0.98,
+    1.0
+   ],
+   "frac_called_sedated": 0.6901408450704225,
+   "frac_called_sedated_if_awake": 0.0,
+   "frac_called_sedated_if_sedated": 0.9607843137254902,
+   "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3
+   }
+  },
+  {
+   "model": "gradient_boosting",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.8625,
+   "ba_ci95": [
+    0.7625,
+    0.95
+   ],
+   "roc_auc": 0.93125,
+   "auc_ci95": [
+    0.8724999999999999,
+    0.9862500000000001
+   ],
+   "frac_called_sedated": 0.31666666666666665,
+   "frac_called_sedated_if_awake": 0.075,
+   "frac_called_sedated_if_sedated": 0.8,
+   "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 2
+   }
+  },
+  {
+   "model": "xgboost",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.9803921568627452,
+   "ba_ci95": [
+    0.95,
+    1.0
+   ],
+   "roc_auc": 0.9970588235294118,
+   "auc_ci95": [
+    0.9888888888888889,
+    1.0
+   ],
+   "frac_called_sedated": 0.6901408450704225,
+   "frac_called_sedated_if_awake": 0.0,
+   "frac_called_sedated_if_sedated": 0.9607843137254902,
+   "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 2
+   }
+  },
+  {
+   "model": "xgboost",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.925,
+   "ba_ci95": [
+    0.85,
+    1.0
+   ],
+   "roc_auc": 0.93625,
+   "auc_ci95": [
+    0.8724999999999999,
+    1.0
+   ],
+   "frac_called_sedated": 0.3333333333333333,
+   "frac_called_sedated_if_awake": 0.05,
+   "frac_called_sedated_if_sedated": 0.9,
+   "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 4
+   }
+  },
+  {
+   "model": "lightgbm",
+   "train": "Cambridge",
+   "test": "Oslo",
+   "n_recordings": 71,
+   "n_people": 20,
+   "balanced_accuracy": 0.9803921568627452,
+   "ba_ci95": [
+    0.95,
+    1.0
+   ],
+   "roc_auc": 0.9970588235294118,
+   "auc_ci95": [
+    0.9886792452830189,
+    1.0
+   ],
+   "frac_called_sedated": 0.6901408450704225,
+   "frac_called_sedated_if_awake": 0.0,
+   "frac_called_sedated_if_sedated": 0.9607843137254902,
+   "best_params": {
+    "learning_rate": 0.1,
+    "num_leaves": 7
+   }
+  },
+  {
+   "model": "lightgbm",
+   "train": "Oslo",
+   "test": "Cambridge",
+   "n_recordings": 60,
+   "n_people": 20,
+   "balanced_accuracy": 0.875,
+   "ba_ci95": [
+    0.775,
+    0.95
+   ],
+   "roc_auc": 0.9225,
+   "auc_ci95": [
+    0.8575,
+    0.98625
+   ],
+   "frac_called_sedated": 0.3,
+   "frac_called_sedated_if_awake": 0.05,
+   "frac_called_sedated_if_sedated": 0.8,
+   "best_params": {
+    "learning_rate": 0.1,
+    "num_leaves": 15
+   }
+  }
+ ],
+ "calibration": {
+  "raw": {
+   "brier": 0.029775889976709137,
+   "ece": 0.031611214135365044
+  },
+  "platt": {
+   "brier": 0.039081016293372725,
+   "ece": 0.07112407724794342,
+   "balanced_accuracy": 0.9705399061032863
+  },
+  "curve_platt": {
+   "mean_predicted": [
+    0.06680562937677115,
+    0.28244330918075367,
+    0.4858257664169593,
+    0.7170917065583727,
+    0.9394771505025767
+   ],
+   "fraction_positive": [
+    0.037037037037037035,
+    0.14285714285714285,
+    0.5,
+    1.0,
+    0.9830508474576272
+   ],
+   "count": [
+    54,
+    7,
+    2,
+    9,
+    59
+   ]
+  },
+  "curve_raw": {
+   "mean_predicted": [
+    0.027195651664242686,
+    0.28080338813006944,
+    0.7685596427774514,
+    0.9803712216012469
+   ],
+   "fraction_positive": [
+    0.037037037037037035,
+    0.125,
+    1.0,
+    0.9846153846153847
+   ],
+   "count": [
+    54,
+    8,
+    4,
+    65
+   ]
+  }
+ },
+ "conformal": {
+  "coverage": 0.816793893129771,
+  "target": 0.8,
+  "n": 131,
+  "frac_single": 0.8396946564885496,
+  "frac_uncertain": 0.16030534351145037,
+  "acc_when_single": 0.9727272727272728
+ },
+ "dose_response_cambridge": {
+  "by_level": {
+   "1": {
+    "mean": 0.10276987818017824,
+    "sd": 0.10774084474713967,
+    "n": 20
+   },
+   "2": {
+    "mean": 0.3801355236299707,
+    "sd": 0.3036765329872275,
+    "n": 20
+   },
+   "3": {
+    "mean": 0.7647963704084808,
+    "sd": 0.2609068511838306,
+    "n": 20
+   },
+   "4": {
+    "mean": 0.14651169378866952,
+    "sd": 0.18214158827806665,
+    "n": 20
+   }
+  },
+  "spearman_propofol": 0.7288666898593035
+ },
+ "oslo_levels": {
+  "awake_mean": 0.06787577230892397,
+  "sedated_mean": 0.9176502280077875,
+  "n_awake": 20,
+  "n_sedated": 51
+ },
+ "shap": {
+  "available": true,
+  "top": [
+   {
+    "feature": "frontal:rel_beta",
+    "plain": "frontal: share of power in the beta band (13-30 Hz)",
+    "mean_abs_shap": 1.8143501445036296,
+    "sedated_minus_awake_z": 0.9785780425804751,
+    "stable_in_folds": 0.625
+   },
+   {
+    "feature": "frontal_minus_occipital:rel_alpha",
+    "plain": "frontal minus occipital: share of power in the alpha band (8-13 Hz)",
+    "mean_abs_shap": 1.5450685729830038,
+    "sedated_minus_awake_z": 1.1321233852682338,
+    "stable_in_folds": 0.65
+   },
+   {
+    "feature": "frontal:rel_theta",
+    "plain": "frontal: share of power in the theta band (4-8 Hz)",
+    "mean_abs_shap": 1.3535847284886136,
+    "sedated_minus_awake_z": -0.8075980587001305,
+    "stable_in_folds": 0.5
+   },
+   {
+    "feature": "parietal:hjorth_complexity",
+    "plain": "parietal: how much the waveform departs from a sine (Hjorth complexity)",
+    "mean_abs_shap": 0.8822505899639299,
+    "sedated_minus_awake_z": 0.47966202595694096,
+    "stable_in_folds": 0.725
+   },
+   {
+    "feature": "temporal:rel_gamma",
+    "plain": "temporal: share of power in the gamma band (30-45 Hz)",
+    "mean_abs_shap": 0.8348742436263569,
+    "sedated_minus_awake_z": -0.7255016300523259,
+    "stable_in_folds": 0.6
+   },
+   {
+    "feature": "occipital:rel_beta",
+    "plain": "occipital: share of power in the beta band (13-30 Hz)",
+    "mean_abs_shap": 0.6828297101978668,
+    "sedated_minus_awake_z": 0.5762816941503641,
+    "stable_in_folds": 0.6
+   },
+   {
+    "feature": "occipital:slope",
+    "plain": "occipital: steepness of the 1/f background (aperiodic slope)",
+    "mean_abs_shap": 0.5730216663331682,
+    "sedated_minus_awake_z": -0.5349000788726981,
+    "stable_in_folds": 0.65
+   },
+   {
+    "feature": "occipital:hjorth_complexity",
+    "plain": "occipital: how much the waveform departs from a sine (Hjorth complexity)",
+    "mean_abs_shap": 0.4176654374415777,
+    "sedated_minus_awake_z": 0.6892216097867554,
+    "stable_in_folds": 0.675
+   },
+   {
+    "feature": "occipital:rel_theta",
+    "plain": "occipital: share of power in the theta band (4-8 Hz)",
+    "mean_abs_shap": 0.4071660376518237,
+    "sedated_minus_awake_z": -0.08794126411646438,
+    "stable_in_folds": 0.5
+   },
+   {
+    "feature": "occipital:rel_alpha",
+    "plain": "occipital: share of power in the alpha band (8-13 Hz)",
+    "mean_abs_shap": 0.3702940290403772,
+    "sedated_minus_awake_z": -1.1488582880949627,
+    "stable_in_folds": 0.7
+   },
+   {
+    "feature": "frontal:hjorth_complexity",
+    "plain": "frontal: how much the waveform departs from a sine (Hjorth complexity)",
+    "mean_abs_shap": 0.292808142221468,
+    "sedated_minus_awake_z": 0.05885457222641595,
+    "stable_in_folds": 0.825
+   },
+   {
+    "feature": "occipital:rel_delta",
+    "plain": "occipital: share of power in the delta band (1-4 Hz, slow waves)",
+    "mean_abs_shap": 0.25939765389359404,
+    "sedated_minus_awake_z": 1.0216786477262851,
+    "stable_in_folds": 0.7
+   },
+   {
+    "feature": "parietal:rel_alpha",
+    "plain": "parietal: share of power in the alpha band (8-13 Hz)",
+    "mean_abs_shap": 0.25007901463080434,
+    "sedated_minus_awake_z": -0.9874701711614028,
+    "stable_in_folds": 0.4
+   },
+   {
+    "feature": "frontal:slope",
+    "plain": "frontal: steepness of the 1/f background (aperiodic slope)",
+    "mean_abs_shap": 0.24454584652133354,
+    "sedated_minus_awake_z": -0.42797417612258015,
+    "stable_in_folds": 0.675
+   },
+   {
+    "feature": "frontal:rel_gamma",
+    "plain": "frontal: share of power in the gamma band (30-45 Hz)",
+    "mean_abs_shap": 0.24216538454080355,
+    "sedated_minus_awake_z": -0.5150126095996281,
+    "stable_in_folds": 0.55
+   }
+  ]
+ },
+ "ood_within": {
+  "mean_flagged_epoch_fraction": 0.05563378056774295,
+  "recordings_over_25pct": 0.0625,
+  "n": 80
+ },
+ "ood_across_sites": {
+  "train_Cambridge_flags_Oslo": 0.3671875,
+  "train_Oslo_flags_Cambridge": 0.0951346655082537
+ },
+ "permutation": {
+  "n": 100,
+  "params": {
+   "learning_rate": 0.1,
+   "num_leaves": 7
+  },
+  "observed": 0.9705399061032863,
+  "null_mean": 0.5793051643192487,
+  "null_p95": 0.6587617370892019,
+  "p_value": 0.009900990099009901,
+  "null": [
+   0.6066901408450704,
+   0.5515258215962441,
+   0.6669014084507042,
+   0.49518779342723007,
+   0.5913145539906104,
+   0.6278169014084507,
+   0.5733568075117371,
+   0.5214788732394366,
+   0.5477699530516432,
+   0.5944835680751174,
+   0.5681924882629108,
+   0.5035211267605634,
+   0.6624413145539906,
+   0.620774647887324,
+   0.55481220657277,
+   0.6450704225352113,
+   0.5957746478873239,
+   0.5663145539906104,
+   0.5303990610328638,
+   0.607981220657277,
+   0.5073943661971831,
+   0.557981220657277,
+   0.5727699530516431,
+   0.5316901408450705,
+   0.5785211267605634,
+   0.5003521126760564,
+   0.6053990610328639,
+   0.47018779342723005,
+   0.5791079812206572,
+   0.6624413145539906,
+   0.5131455399061033,
+   0.48626760563380284,
+   0.5253521126760563,
+   0.6181924882629108,
+   0.5355633802816901,
+   0.5061032863849765,
+   0.5746478873239437,
+   0.5759389671361502,
+   0.5413145539906103,
+   0.6630281690140845,
+   0.5663145539906104,
+   0.589319248826291,
+   0.5694835680751174,
+   0.6066901408450704,
+   0.5778169014084507,
+   0.5644366197183098,
+   0.6053990610328639,
+   0.5650234741784037,
+   0.5509389671361502,
+   0.5887323943661972,
+   0.5426056338028169,
+   0.6176056338028169,
+   0.6169014084507043,
+   0.6585680751173709,
+   0.55481220657277,
+   0.5970657276995306,
+   0.608568075117371,
+   0.5650234741784037,
+   0.6111502347417841,
+   0.6348591549295775,
+   0.5746478873239437,
+   0.5829812206572771,
+   0.5720657276995305,
+   0.5906103286384976,
+   0.6150234741784038,
+   0.5553990610328638,
+   0.5336854460093897,
+   0.6072769953051643,
+   0.5713615023474179,
+   0.6111502347417841,
+   0.5233568075117371,
+   0.5944835680751174,
+   0.55481220657277,
+   0.6348591549295775,
+   0.5829812206572771,
+   0.6252347417840376,
+   0.5727699530516431,
+   0.5733568075117371,
+   0.54518779342723,
+   0.6066901408450704,
+   0.5342723004694836,
+   0.6406103286384977,
+   0.6053990610328639,
+   0.6072769953051643,
+   0.5931924882629107,
+   0.5407276995305165,
+   0.5874413145539906,
+   0.517018779342723,
+   0.5624413145539906,
+   0.6624413145539906,
+   0.5528169014084507,
+   0.620774647887324,
+   0.5816901408450704,
+   0.5913145539906104,
+   0.6457746478873239,
+   0.545774647887324,
+   0.5394366197183098,
+   0.5900234741784038,
+   0.6572769953051643,
+   0.5983568075117371
+  ]
+ },
+ "feature_names": [
+  "frontal:rel_delta",
+  "frontal:rel_theta",
+  "frontal:rel_alpha",
+  "frontal:rel_beta",
+  "frontal:rel_gamma",
+  "frontal:hjorth_mobility",
+  "frontal:hjorth_complexity",
+  "frontal:spectral_entropy",
+  "frontal:perm_entropy",
+  "frontal:slope",
+  "central:rel_delta",
+  "central:rel_theta",
+  "central:rel_alpha",
+  "central:rel_beta",
+  "central:rel_gamma",
+  "central:hjorth_mobility",
+  "central:hjorth_complexity",
+  "central:spectral_entropy",
+  "central:perm_entropy",
+  "central:slope",
+  "temporal:rel_delta",
+  "temporal:rel_theta",
+  "temporal:rel_alpha",
+  "temporal:rel_beta",
+  "temporal:rel_gamma",
+  "temporal:hjorth_mobility",
+  "temporal:hjorth_complexity",
+  "temporal:spectral_entropy",
+  "temporal:perm_entropy",
+  "temporal:slope",
+  "parietal:rel_delta",
+  "parietal:rel_theta",
+  "parietal:rel_alpha",
+  "parietal:rel_beta",
+  "parietal:rel_gamma",
+  "parietal:hjorth_mobility",
+  "parietal:hjorth_complexity",
+  "parietal:spectral_entropy",
+  "parietal:perm_entropy",
+  "parietal:slope",
+  "occipital:rel_delta",
+  "occipital:rel_theta",
+  "occipital:rel_alpha",
+  "occipital:rel_beta",
+  "occipital:rel_gamma",
+  "occipital:hjorth_mobility",
+  "occipital:hjorth_complexity",
+  "occipital:spectral_entropy",
+  "occipital:perm_entropy",
+  "occipital:slope",
+  "global:rel_delta",
+  "global:rel_theta",
+  "global:rel_alpha",
+  "global:rel_beta",
+  "global:rel_gamma",
+  "global:hjorth_mobility",
+  "global:hjorth_complexity",
+  "global:spectral_entropy",
+  "global:perm_entropy",
+  "global:slope",
+  "global:alpha_over_delta",
+  "frontal_minus_occipital:rel_alpha",
+  "global:wpli_delta",
+  "frontal_to_posterior:wpli_delta",
+  "global:wpli_theta",
+  "frontal_to_posterior:wpli_theta",
+  "global:wpli_alpha",
+  "frontal_to_posterior:wpli_alpha"
+ ],
+ "dementia_check": {
+  "n_recordings": 88,
+  "by_group": {
+   "Healthy": {
+    "n": 29,
+    "mean_p_sedated": 0.16167918494490838,
+    "median_p_sedated": 0.13595990480373854,
+    "frac_called_sedated": 0.0,
+    "frac_verdict_awake": 0.6206896551724138,
+    "frac_verdict_sedated": 0.0,
+    "frac_verdict_uncertain": 0.3793103448275862,
+    "mean_unfamiliar_fraction": 0.17763540406054437,
+    "frac_recordings_unfamiliar": 0.3103448275862069
+   },
+   "Alzheimer": {
+    "n": 36,
+    "mean_p_sedated": 0.14039094017579368,
+    "median_p_sedated": 0.10818721101917694,
+    "frac_called_sedated": 0.05555555555555555,
+    "frac_verdict_awake": 0.8611111111111112,
+    "frac_verdict_sedated": 0.0,
+    "frac_verdict_uncertain": 0.1388888888888889,
+    "mean_unfamiliar_fraction": 0.20910496365358458,
+    "frac_recordings_unfamiliar": 0.2777777777777778
+   },
+   "Frontotemporal": {
+    "n": 23,
+    "mean_p_sedated": 0.1433739881452539,
+    "median_p_sedated": 0.11499659579616013,
+    "frac_called_sedated": 0.0,
+    "frac_verdict_awake": 0.7391304347826086,
+    "frac_verdict_sedated": 0.0,
+    "frac_verdict_uncertain": 0.2608695652173913,
+    "mean_unfamiliar_fraction": 0.35529856006477145,
+    "frac_recordings_unfamiliar": 0.43478260869565216
+   }
+  },
+  "spearman_mmse": 0.14580641536844804,
+  "spearman_mmse_p": 0.17526318958134274,
+  "rejected_epoch_fraction": 0.10737202338514187,
+  "rows": [
+   {
+    "id": "sub-001",
+    "group": "A",
+    "mmse": 16.0,
+    "age": 57.0,
+    "n_epochs": 57,
+    "p_sedated": 0.051874888224687,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.07017543859649122,
+    "epochs_rejected": 2,
+    "epochs_total": 59
+   },
+   {
+    "id": "sub-002",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 78.0,
+    "n_epochs": 75,
+    "p_sedated": 0.14180300737420853,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.02666666666666667,
+    "epochs_rejected": 4,
+    "epochs_total": 79
+   },
+   {
+    "id": "sub-003",
+    "group": "A",
+    "mmse": 14.0,
+    "age": 70.0,
+    "n_epochs": 30,
+    "p_sedated": 0.1047721873030376,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.1,
+    "epochs_rejected": 0,
+    "epochs_total": 30
+   },
+   {
+    "id": "sub-004",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 67.0,
+    "n_epochs": 64,
+    "p_sedated": 0.11017515653338222,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.484375,
+    "epochs_rejected": 6,
+    "epochs_total": 70
+   },
+   {
+    "id": "sub-005",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 70.0,
+    "n_epochs": 69,
+    "p_sedated": 0.13121796405427072,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.08695652173913043,
+    "epochs_rejected": 11,
+    "epochs_total": 80
+   },
+   {
+    "id": "sub-006",
+    "group": "A",
+    "mmse": 14.0,
+    "age": 61.0,
+    "n_epochs": 62,
+    "p_sedated": 0.10794466640074811,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.14516129032258066,
+    "epochs_rejected": 1,
+    "epochs_total": 63
+   },
+   {
+    "id": "sub-007",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 79.0,
+    "n_epochs": 70,
+    "p_sedated": 0.06640906429179748,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.014285714285714285,
+    "epochs_rejected": 6,
+    "epochs_total": 76
+   },
+   {
+    "id": "sub-008",
+    "group": "A",
+    "mmse": 16.0,
+    "age": 62.0,
+    "n_epochs": 63,
+    "p_sedated": 0.6871060911627039,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.047619047619047616,
+    "epochs_rejected": 16,
+    "epochs_total": 79
+   },
+   {
+    "id": "sub-009",
+    "group": "A",
+    "mmse": 23.0,
+    "age": 77.0,
+    "n_epochs": 57,
+    "p_sedated": 0.06400602950288693,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 4,
+    "epochs_total": 61
+   },
+   {
+    "id": "sub-010",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 69.0,
+    "n_epochs": 129,
+    "p_sedated": 0.1502382735343186,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.14728682170542637,
+    "epochs_rejected": 0,
+    "epochs_total": 129
+   },
+   {
+    "id": "sub-011",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 71.0,
+    "n_epochs": 59,
+    "p_sedated": 0.06288671599502384,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.288135593220339,
+    "epochs_rejected": 18,
+    "epochs_total": 77
+   },
+   {
+    "id": "sub-012",
+    "group": "A",
+    "mmse": 18.0,
+    "age": 63.0,
+    "n_epochs": 76,
+    "p_sedated": 0.5216249618464598,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.23684210526315788,
+    "epochs_rejected": 13,
+    "epochs_total": 89
+   },
+   {
+    "id": "sub-013",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 64.0,
+    "n_epochs": 76,
+    "p_sedated": 0.04938026676926082,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.013157894736842105,
+    "epochs_rejected": 8,
+    "epochs_total": 84
+   },
+   {
+    "id": "sub-014",
+    "group": "A",
+    "mmse": 14.0,
+    "age": 77.0,
+    "n_epochs": 70,
+    "p_sedated": 0.15428350195371016,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.21428571428571427,
+    "epochs_rejected": 24,
+    "epochs_total": 94
+   },
+   {
+    "id": "sub-015",
+    "group": "A",
+    "mmse": 18.0,
+    "age": 61.0,
+    "n_epochs": 87,
+    "p_sedated": 0.06972679950441908,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.04597701149425287,
+    "epochs_rejected": 4,
+    "epochs_total": 91
+   },
+   {
+    "id": "sub-016",
+    "group": "A",
+    "mmse": 14.0,
+    "age": 68.0,
+    "n_epochs": 78,
+    "p_sedated": 0.0882121176555939,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.05128205128205128,
+    "epochs_rejected": 20,
+    "epochs_total": 98
+   },
+   {
+    "id": "sub-017",
+    "group": "A",
+    "mmse": 6.0,
+    "age": 61.0,
+    "n_epochs": 78,
+    "p_sedated": 0.1556892732124136,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 6,
+    "epochs_total": 84
+   },
+   {
+    "id": "sub-018",
+    "group": "A",
+    "mmse": 23.0,
+    "age": 73.0,
+    "n_epochs": 82,
+    "p_sedated": 0.1795109644506019,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.07317073170731707,
+    "epochs_rejected": 2,
+    "epochs_total": 84
+   },
+   {
+    "id": "sub-019",
+    "group": "A",
+    "mmse": 14.0,
+    "age": 62.0,
+    "n_epochs": 90,
+    "p_sedated": 0.21280166888468605,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.6333333333333333,
+    "epochs_rejected": 2,
+    "epochs_total": 92
+   },
+   {
+    "id": "sub-020",
+    "group": "A",
+    "mmse": 4.0,
+    "age": 71.0,
+    "n_epochs": 77,
+    "p_sedated": 0.09540935828305715,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.15584415584415584,
+    "epochs_rejected": 9,
+    "epochs_total": 86
+   },
+   {
+    "id": "sub-021",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 79.0,
+    "n_epochs": 87,
+    "p_sedated": 0.1130136506089361,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.9885057471264368,
+    "epochs_rejected": 5,
+    "epochs_total": 92
+   },
+   {
+    "id": "sub-022",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 68.0,
+    "n_epochs": 74,
+    "p_sedated": 0.21530342244650272,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.17567567567567569,
+    "epochs_rejected": 8,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-023",
+    "group": "A",
+    "mmse": 16.0,
+    "age": 60.0,
+    "n_epochs": 72,
+    "p_sedated": 0.06769351068736801,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.2638888888888889,
+    "epochs_rejected": 14,
+    "epochs_total": 86
+   },
+   {
+    "id": "sub-024",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 69.0,
+    "n_epochs": 67,
+    "p_sedated": 0.1263842728032389,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 9,
+    "epochs_total": 76
+   },
+   {
+    "id": "sub-025",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 79.0,
+    "n_epochs": 63,
+    "p_sedated": 0.10842975563760579,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.5714285714285714,
+    "epochs_rejected": 6,
+    "epochs_total": 69
+   },
+   {
+    "id": "sub-026",
+    "group": "A",
+    "mmse": 18.0,
+    "age": 61.0,
+    "n_epochs": 48,
+    "p_sedated": 0.059737733292901385,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.6875,
+    "epochs_rejected": 43,
+    "epochs_total": 91
+   },
+   {
+    "id": "sub-027",
+    "group": "A",
+    "mmse": 16.0,
+    "age": 67.0,
+    "n_epochs": 74,
+    "p_sedated": 0.1798511836791421,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.6081081081081081,
+    "epochs_rejected": 9,
+    "epochs_total": 83
+   },
+   {
+    "id": "sub-028",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 49.0,
+    "n_epochs": 70,
+    "p_sedated": 0.10487553520818278,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 12,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-029",
+    "group": "A",
+    "mmse": 16.0,
+    "age": 53.0,
+    "n_epochs": 69,
+    "p_sedated": 0.06938193931437449,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.028985507246376812,
+    "epochs_rejected": 5,
+    "epochs_total": 74
+   },
+   {
+    "id": "sub-030",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 56.0,
+    "n_epochs": 45,
+    "p_sedated": 0.18373346112836508,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.35555555555555557,
+    "epochs_rejected": 10,
+    "epochs_total": 55
+   },
+   {
+    "id": "sub-031",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 67.0,
+    "n_epochs": 103,
+    "p_sedated": 0.058441259206320866,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.07766990291262135,
+    "epochs_rejected": 12,
+    "epochs_total": 115
+   },
+   {
+    "id": "sub-032",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 59.0,
+    "n_epochs": 72,
+    "p_sedated": 0.07314431733215788,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.041666666666666664,
+    "epochs_rejected": 13,
+    "epochs_total": 85
+   },
+   {
+    "id": "sub-033",
+    "group": "A",
+    "mmse": 20.0,
+    "age": 72.0,
+    "n_epochs": 70,
+    "p_sedated": 0.13131192454546206,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.8,
+    "epochs_rejected": 0,
+    "epochs_total": 70
+   },
+   {
+    "id": "sub-034",
+    "group": "A",
+    "mmse": 18.0,
+    "age": 75.0,
+    "n_epochs": 87,
+    "p_sedated": 0.06262048416719546,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 10,
+    "epochs_total": 97
+   },
+   {
+    "id": "sub-035",
+    "group": "A",
+    "mmse": 22.0,
+    "age": 57.0,
+    "n_epochs": 74,
+    "p_sedated": 0.10678391746551745,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.08108108108108109,
+    "epochs_rejected": 1,
+    "epochs_total": 75
+   },
+   {
+    "id": "sub-036",
+    "group": "A",
+    "mmse": 9.0,
+    "age": 58.0,
+    "n_epochs": 76,
+    "p_sedated": 0.1882945218680348,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.013157894736842105,
+    "epochs_rejected": 9,
+    "epochs_total": 85
+   },
+   {
+    "id": "sub-037",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 57.0,
+    "n_epochs": 75,
+    "p_sedated": 0.05592232047075424,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 2,
+    "epochs_total": 77
+   },
+   {
+    "id": "sub-038",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 62.0,
+    "n_epochs": 83,
+    "p_sedated": 0.28872307675845016,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.060240963855421686,
+    "epochs_rejected": 6,
+    "epochs_total": 89
+   },
+   {
+    "id": "sub-039",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 70.0,
+    "n_epochs": 81,
+    "p_sedated": 0.1289809959361652,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.3950617283950617,
+    "epochs_rejected": 4,
+    "epochs_total": 85
+   },
+   {
+    "id": "sub-040",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 61.0,
+    "n_epochs": 94,
+    "p_sedated": 0.12581043350379514,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.06382978723404255,
+    "epochs_rejected": 7,
+    "epochs_total": 101
+   },
+   {
+    "id": "sub-041",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 77.0,
+    "n_epochs": 86,
+    "p_sedated": 0.21386462490220712,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.9767441860465116,
+    "epochs_rejected": 2,
+    "epochs_total": 88
+   },
+   {
+    "id": "sub-042",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 74.0,
+    "n_epochs": 85,
+    "p_sedated": 0.23479317426671723,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.047058823529411764,
+    "epochs_rejected": 12,
+    "epochs_total": 97
+   },
+   {
+    "id": "sub-043",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 72.0,
+    "n_epochs": 81,
+    "p_sedated": 0.2120110549901349,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.09876543209876543,
+    "epochs_rejected": 1,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-044",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 64.0,
+    "n_epochs": 86,
+    "p_sedated": 0.062471466212634226,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 2,
+    "epochs_total": 88
+   },
+   {
+    "id": "sub-045",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 70.0,
+    "n_epochs": 74,
+    "p_sedated": 0.11628071451751493,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.05405405405405406,
+    "epochs_rejected": 12,
+    "epochs_total": 86
+   },
+   {
+    "id": "sub-046",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 63.0,
+    "n_epochs": 67,
+    "p_sedated": 0.23999774367984297,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.014925373134328358,
+    "epochs_rejected": 8,
+    "epochs_total": 75
+   },
+   {
+    "id": "sub-047",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 70.0,
+    "n_epochs": 74,
+    "p_sedated": 0.1483488879023093,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.02702702702702703,
+    "epochs_rejected": 6,
+    "epochs_total": 80
+   },
+   {
+    "id": "sub-048",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 65.0,
+    "n_epochs": 79,
+    "p_sedated": 0.22561556481348888,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.3037974683544304,
+    "epochs_rejected": 22,
+    "epochs_total": 101
+   },
+   {
+    "id": "sub-049",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 62.0,
+    "n_epochs": 77,
+    "p_sedated": 0.09561533848718744,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 1,
+    "epochs_total": 78
+   },
+   {
+    "id": "sub-050",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 68.0,
+    "n_epochs": 74,
+    "p_sedated": 0.07688140629223476,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.5,
+    "epochs_rejected": 8,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-051",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 75.0,
+    "n_epochs": 68,
+    "p_sedated": 0.13595990480373854,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.8235294117647058,
+    "epochs_rejected": 10,
+    "epochs_total": 78
+   },
+   {
+    "id": "sub-052",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 73.0,
+    "n_epochs": 74,
+    "p_sedated": 0.14673908975877473,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.013513513513513514,
+    "epochs_rejected": 2,
+    "epochs_total": 76
+   },
+   {
+    "id": "sub-053",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 70.0,
+    "n_epochs": 65,
+    "p_sedated": 0.09015543602666978,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.27692307692307694,
+    "epochs_rejected": 14,
+    "epochs_total": 79
+   },
+   {
+    "id": "sub-054",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 78.0,
+    "n_epochs": 81,
+    "p_sedated": 0.17636475289908582,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.037037037037037035,
+    "epochs_rejected": 3,
+    "epochs_total": 84
+   },
+   {
+    "id": "sub-055",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 67.0,
+    "n_epochs": 80,
+    "p_sedated": 0.21137417697075556,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.0125,
+    "epochs_rejected": 2,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-056",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 64.0,
+    "n_epochs": 80,
+    "p_sedated": 0.07665803532725138,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 8,
+    "epochs_total": 88
+   },
+   {
+    "id": "sub-057",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 64.0,
+    "n_epochs": 77,
+    "p_sedated": 0.03829161044300967,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 2,
+    "epochs_total": 79
+   },
+   {
+    "id": "sub-058",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 62.0,
+    "n_epochs": 75,
+    "p_sedated": 0.24260135184978993,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.16,
+    "epochs_rejected": 1,
+    "epochs_total": 76
+   },
+   {
+    "id": "sub-059",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 77.0,
+    "n_epochs": 78,
+    "p_sedated": 0.345896311536304,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.3974358974358974,
+    "epochs_rejected": 0,
+    "epochs_total": 78
+   },
+   {
+    "id": "sub-060",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 71.0,
+    "n_epochs": 65,
+    "p_sedated": 0.33794404126206434,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.06153846153846154,
+    "epochs_rejected": 10,
+    "epochs_total": 75
+   },
+   {
+    "id": "sub-061",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 63.0,
+    "n_epochs": 69,
+    "p_sedated": 0.10625001588703292,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.3188405797101449,
+    "epochs_rejected": 11,
+    "epochs_total": 80
+   },
+   {
+    "id": "sub-062",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 67.0,
+    "n_epochs": 84,
+    "p_sedated": 0.1247122737867912,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.07142857142857142,
+    "epochs_rejected": 7,
+    "epochs_total": 91
+   },
+   {
+    "id": "sub-063",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 66.0,
+    "n_epochs": 80,
+    "p_sedated": 0.09965892813818526,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.1125,
+    "epochs_rejected": 0,
+    "epochs_total": 80
+   },
+   {
+    "id": "sub-064",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 66.0,
+    "n_epochs": 71,
+    "p_sedated": 0.13461463366792614,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 13,
+    "epochs_total": 84
+   },
+   {
+    "id": "sub-065",
+    "group": "C",
+    "mmse": 30.0,
+    "age": 71.0,
+    "n_epochs": 77,
+    "p_sedated": 0.1961589983115277,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.3246753246753247,
+    "epochs_rejected": 11,
+    "epochs_total": 88
+   },
+   {
+    "id": "sub-066",
+    "group": "F",
+    "mmse": 20.0,
+    "age": 73.0,
+    "n_epochs": 48,
+    "p_sedated": 0.16671917416116155,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.020833333333333332,
+    "epochs_rejected": 7,
+    "epochs_total": 55
+   },
+   {
+    "id": "sub-067",
+    "group": "F",
+    "mmse": 24.0,
+    "age": 66.0,
+    "n_epochs": 46,
+    "p_sedated": 0.3561524083629811,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 1.0,
+    "epochs_rejected": 18,
+    "epochs_total": 64
+   },
+   {
+    "id": "sub-068",
+    "group": "F",
+    "mmse": 25.0,
+    "age": 78.0,
+    "n_epochs": 57,
+    "p_sedated": 0.12735173880405484,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.10526315789473684,
+    "epochs_rejected": 0,
+    "epochs_total": 57
+   },
+   {
+    "id": "sub-069",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 70.0,
+    "n_epochs": 54,
+    "p_sedated": 0.07383421809636144,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.3888888888888889,
+    "epochs_rejected": 9,
+    "epochs_total": 63
+   },
+   {
+    "id": "sub-070",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 67.0,
+    "n_epochs": 45,
+    "p_sedated": 0.11499659579616013,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.06666666666666667,
+    "epochs_rejected": 2,
+    "epochs_total": 47
+   },
+   {
+    "id": "sub-071",
+    "group": "F",
+    "mmse": 20.0,
+    "age": 62.0,
+    "n_epochs": 61,
+    "p_sedated": 0.09585664372709203,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.08196721311475409,
+    "epochs_rejected": 1,
+    "epochs_total": 62
+   },
+   {
+    "id": "sub-072",
+    "group": "F",
+    "mmse": 18.0,
+    "age": 65.0,
+    "n_epochs": 56,
+    "p_sedated": 0.3664596510390714,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.03571428571428571,
+    "epochs_rejected": 10,
+    "epochs_total": 66
+   },
+   {
+    "id": "sub-073",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 57.0,
+    "n_epochs": 77,
+    "p_sedated": 0.034533098946189125,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.012987012987012988,
+    "epochs_rejected": 8,
+    "epochs_total": 85
+   },
+   {
+    "id": "sub-074",
+    "group": "F",
+    "mmse": 20.0,
+    "age": 53.0,
+    "n_epochs": 83,
+    "p_sedated": 0.04574011203338762,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.024096385542168676,
+    "epochs_rejected": 19,
+    "epochs_total": 102
+   },
+   {
+    "id": "sub-075",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 71.0,
+    "n_epochs": 52,
+    "p_sedated": 0.12938786057925286,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.9423076923076923,
+    "epochs_rejected": 23,
+    "epochs_total": 75
+   },
+   {
+    "id": "sub-076",
+    "group": "F",
+    "mmse": 24.0,
+    "age": 44.0,
+    "n_epochs": 73,
+    "p_sedated": 0.22945655673466733,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 1.0,
+    "epochs_rejected": 8,
+    "epochs_total": 81
+   },
+   {
+    "id": "sub-077",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 61.0,
+    "n_epochs": 67,
+    "p_sedated": 0.1840667768301564,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.9850746268656716,
+    "epochs_rejected": 3,
+    "epochs_total": 70
+   },
+   {
+    "id": "sub-078",
+    "group": "F",
+    "mmse": 22.0,
+    "age": 62.0,
+    "n_epochs": 85,
+    "p_sedated": 0.20053842362479904,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.3411764705882353,
+    "epochs_rejected": 2,
+    "epochs_total": 87
+   },
+   {
+    "id": "sub-079",
+    "group": "F",
+    "mmse": 18.0,
+    "age": 60.0,
+    "n_epochs": 78,
+    "p_sedated": 0.22467392098047823,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.9358974358974359,
+    "epochs_rejected": 4,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-080",
+    "group": "F",
+    "mmse": 20.0,
+    "age": 71.0,
+    "n_epochs": 83,
+    "p_sedated": 0.10810835657346003,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.07228915662650602,
+    "epochs_rejected": 10,
+    "epochs_total": 93
+   },
+   {
+    "id": "sub-081",
+    "group": "F",
+    "mmse": 18.0,
+    "age": 61.0,
+    "n_epochs": 76,
+    "p_sedated": 0.03772398736579369,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.013157894736842105,
+    "epochs_rejected": 6,
+    "epochs_total": 82
+   },
+   {
+    "id": "sub-082",
+    "group": "F",
+    "mmse": 27.0,
+    "age": 63.0,
+    "n_epochs": 76,
+    "p_sedated": 0.08207653569782093,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.2236842105263158,
+    "epochs_rejected": 1,
+    "epochs_total": 77
+   },
+   {
+    "id": "sub-083",
+    "group": "F",
+    "mmse": 20.0,
+    "age": 68.0,
+    "n_epochs": 83,
+    "p_sedated": 0.1355618591148567,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.3614457831325301,
+    "epochs_rejected": 8,
+    "epochs_total": 91
+   },
+   {
+    "id": "sub-084",
+    "group": "F",
+    "mmse": 24.0,
+    "age": 71.0,
+    "n_epochs": 64,
+    "p_sedated": 0.0615415746314357,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.09375,
+    "epochs_rejected": 1,
+    "epochs_total": 65
+   },
+   {
+    "id": "sub-085",
+    "group": "F",
+    "mmse": 26.0,
+    "age": 64.0,
+    "n_epochs": 45,
+    "p_sedated": 0.11430797642719241,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.6888888888888889,
+    "epochs_rejected": 11,
+    "epochs_total": 56
+   },
+   {
+    "id": "sub-086",
+    "group": "F",
+    "mmse": 26.0,
+    "age": 49.0,
+    "n_epochs": 9,
+    "p_sedated": 0.25640215043885445,
+    "verdict": "uncertain",
+    "unfamiliar_fraction": 0.7777777777777778,
+    "epochs_rejected": 56,
+    "epochs_total": 65
+   },
+   {
+    "id": "sub-087",
+    "group": "F",
+    "mmse": 24.0,
+    "age": 73.0,
+    "n_epochs": 31,
+    "p_sedated": 0.063797541524426,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 29,
+    "epochs_total": 60
+   },
+   {
+    "id": "sub-088",
+    "group": "F",
+    "mmse": 24.0,
+    "age": 55.0,
+    "n_epochs": 71,
+    "p_sedated": 0.08831456585118636,
+    "verdict": "awake-like",
+    "unfamiliar_fraction": 0.0,
+    "epochs_rejected": 8,
+    "epochs_total": 79
+   }
+  ]
+ },
+ "final": {
+  "best_params": {
+   "learning_rate": 0.05,
+   "num_leaves": 7
+  },
+  "platt": [
+   0.4486051618943544,
+   -0.24813459002393676
+  ],
+  "conformal_q": 0.1879878281338826,
+  "ood_components": 15,
+  "fit_seconds": 237.2,
+  "model_sha256": "8bcd455de73b2324f96cdd1f5b245db39435fc0dac558b66cf3912360d486051"
+ }
+}

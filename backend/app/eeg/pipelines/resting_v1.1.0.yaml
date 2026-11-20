@@ -1,0 +1,73 @@
+# Pipeline definition. NEVER edit a released file: any change of a default means a NEW version file.
+# (Parameters are hashed into every processing run, so old results stay reproducible.)
+name: resting
+default: false
+version: 1.1.0
+description: >
+  Resting-state qEEG pre-processing: notch + band-pass, bad-channel handling, average reference,
+  2 s epochs with 1 s step (50 % overlap) and peak-to-peak epoch rejection.
+  Version 1.1.0 = 1.0.0 plus a 4th-order Butterworth band-pass (forward-backward) and FastICA eye-blink removal.
+  Opt-in (default: false) until it has been checked on clinical recordings. Not included: autoreject.
+params:
+  resample_if_above_hz: 500     # band-pass FIRST (anti-alias), then resample
+  resample_to_hz: 250
+  bandpass_hz: [0.5, 45.0]      # high edge is capped at 0.45 x sampling rate
+  filter:
+    design: butterworth         # zero-phase (forward-backward): -6 dB at the edges
+    order: 4
+  notch: true                   # at the site line frequency and its harmonics (line_freq_hz is set per run)
+  interpolation:
+    enabled: true
+    max_bad_fraction: 0.20      # more bad channels than this: drop them instead of interpolating
+    max_clustered: 2            # at most this many bad channels within cluster_distance_m of each other
+    cluster_distance_m: 0.05
+    min_channels_with_positions: 8
+  ica:                          # runs after bad-channel handling, before re-referencing
+    enabled: true
+    method: fastica
+    n_components: 15
+    fit_max_s: 600              # fit on at most the first 10 minutes (1 Hz high-passed copy)
+    min_channels: 8
+    min_duration_s: 30
+    seed: 97
+    max_iter: 1000
+    frontal_ratio_min: 3.0      # mean |map weight| at frontal-pole channels / elsewhere
+    # Excess kurtosis: blinks are sparse and spiky (> 0); a sustained slow oscillation (e.g. real frontal delta) is < 0 and is protected.
+    # The first guess (5.0) removed nothing from simulated blinks at ~8 % duty cycle (their component scored 1.55), so it was lowered
+    # to 1.0 AFTER looking at that one simulation. Not validated on real clinical blinks.
+    kurtosis_min: 1.0
+    low_freq_share_min: 0.5     # share of 0.5-4 Hz power
+    max_remove: 3
+  reference: average
+  epoching:
+    length_s: 2.0
+    step_s: 1.0
+    # Channel-level masks: a channel is masked in an epoch when its peak-to-peak exceeds
+    #   min(reject_ptp_uv, max(reject_relative_floor_uv, reject_relative_k x that channel's median peak-to-peak)).
+    # The WHOLE epoch is rejected only if more than reject_channel_fraction of channels are masked.
+    # Chosen after inspecting 8 public healthy-volunteer recordings (a fixed 150 uV any-channel rule rejected
+    # 98-100 % of epochs in 3 of them); NOT yet validated on clinical recordings.
+    reject_ptp_uv: 300.0
+    reject_relative_k: 4.0
+    reject_relative_floor_uv: 100.0
+    reject_channel_fraction: 0.2
+    min_clean_epochs: 60        # fewer clean epochs: every feature is flagged low-confidence
+  quality:
+    chunk_s: 30.0
+    max_minutes: 60             # long files are sampled evenly over this many minutes of 30 s chunks
+    thresholds:
+      flat_std_uv: 0.5
+      flat_window_s: 5.0
+      flat_fraction: 0.5        # channel flat if more than this fraction of 5 s windows are flat
+      clip_fraction: 0.001
+      noisy_std_uv: 300.0
+      noisy_z: 5.0              # robust z-score of log channel SD across channels
+      line_db: 10.0             # power at the line frequency vs neighbouring frequencies
+      emg_ratio: 0.5            # power 30-45 Hz / 1-30 Hz
+      drift_ratio: 0.5          # power 0.1-0.5 Hz / 0.5-45 Hz
+      corr_min: 0.4             # correlation of a channel with the median of all channels (1 s windows)
+      corr_bad_fraction: 0.5
+      high_amp_ptp_uv: 200.0    # 1 s window peak-to-peak counted as high amplitude in >= half the channels
+      muscle_ratio: 0.5
+    grade_good_min: 75
+    grade_fair_min: 50

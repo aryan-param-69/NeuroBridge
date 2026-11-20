@@ -1,0 +1,146 @@
+{
+  "best_by_accuracy": "ts_logreg",
+  "tied": [
+    "ts_logreg"
+  ],
+  "chosen": "ts_logreg",
+  "table": [
+    {
+      "model": "csp_lda",
+      "balanced_accuracy": 0.5882730912450653,
+      "brier": 0.24549890388747064,
+      "diff_vs_best": 0.02944956183330072,
+      "diff_ci95": [
+        0.0098653431446598,
+        0.048667502108081136
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.565094165182274,
+        0.6122211707141407
+      ]
+    },
+    {
+      "model": "logreg",
+      "balanced_accuracy": 0.5863748355125011,
+      "brier": 0.23847533966394907,
+      "diff_vs_best": 0.03134781756586491,
+      "diff_ci95": [
+        0.007925298414820998,
+        0.05511356579992382
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5650190911404239,
+        0.6075636712662805
+      ]
+    },
+    {
+      "model": "svm_rbf",
+      "balanced_accuracy": 0.5725956827281127,
+      "brier": 0.2521205411827929,
+      "diff_vs_best": 0.04512697035025337,
+      "diff_ci95": [
+        0.021983992198762948,
+        0.06930859053315644
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5530304083620012,
+        0.592452396557917
+      ]
+    },
+    {
+      "model": "random_forest",
+      "balanced_accuracy": 0.556316319959683,
+      "brier": 0.24504927023486278,
+      "diff_vs_best": 0.06140633311868304,
+      "diff_ci95": [
+        0.037295389789950444,
+        0.08580755789158752
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5371981339943563,
+        0.5746126042189719
+      ]
+    },
+    {
+      "model": "gradient_boosting",
+      "balanced_accuracy": 0.5524288154100289,
+      "brier": 0.24456930910084027,
+      "diff_vs_best": 0.06529383766833718,
+      "diff_ci95": [
+        0.041580509596994754,
+        0.08903122422724272
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5339459057688022,
+        0.5702530147754866
+      ]
+    },
+    {
+      "model": "xgboost",
+      "balanced_accuracy": 0.5630512081081838,
+      "brier": 0.2549201548099518,
+      "diff_vs_best": 0.05467144497018228,
+      "diff_ci95": [
+        0.030513827315232212,
+        0.0784541577557462
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5411500955771359,
+        0.5840356613831521
+      ]
+    },
+    {
+      "model": "lightgbm",
+      "balanced_accuracy": 0.5644832992692556,
+      "brier": 0.26190442464164254,
+      "diff_vs_best": 0.05323935380911049,
+      "diff_ci95": [
+        0.031275420206769836,
+        0.07504105664450961
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.5444180601125229,
+        0.5838976079656952
+      ]
+    },
+    {
+      "model": "ts_logreg",
+      "balanced_accuracy": 0.617722653078366,
+      "brier": 0.23912890609721366,
+      "diff_vs_best": 0.0,
+      "diff_ci95": [
+        0.0,
+        0.0
+      ],
+      "tied_with_best": true,
+      "balanced_accuracy_ci95": [
+        0.5917212193597806,
+        0.6429557573724651
+      ]
+    },
+    {
+      "model": "ts_svm_linear",
+      "balanced_accuracy": 0.6003457737211972,
+      "brier": 0.24124366645790157,
+      "diff_vs_best": 0.017376879357168806,
+      "diff_ci95": [
+        0.005607360311309376,
+        0.028965413717655757
+      ],
+      "tied_with_best": false,
+      "balanced_accuracy_ci95": [
+        0.577021765554215,
+        0.6241302592419053
+      ]
+    }
+  ],
+  "rule": "tied if 95% paired subject-bootstrap CI of (best - model) includes 0; then lowest Brier, then most interpretable, then cheapest",
+  "n_boot": 5000
+}

@@ -1,0 +1,59 @@
+[project]
+name = "neurobridge-ml"
+version = "0.1.0"
+description = "Offline ML research workspace (never deployed with the clinical app)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "mne>=1.8",
+  "numpy",
+  "scipy",
+  "pandas",
+  "scikit-learn>=1.5",
+  "xgboost>=2.1",
+  "lightgbm>=4.5",
+  "pyriemann>=0.7",
+  "shap>=0.46",
+  "matplotlib",
+  "joblib",
+  "pymongo>=4.8",
+  "pyarrow",
+  "h5py>=3.16.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff"]
+
+[tool.ruff]
+line-length = 150
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nbml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/nbml/run_experiment.py" = ["E402"]  # thread env vars must be set before numpy is imported
+"src/nbml/report.py" = ["E501", "E702"]  # long markdown template lines; compact plotting code
+"src/nbml/sed_report.py" = ["E501"]  # report prose
+"src/nbml/sed_final.py" = ["E501"]  # model-card prose
+"src/nbml/sed_features.py" = ["E501"]  # plain-language feature descriptions
+"tests/*" = ["E501"]
+"src/nbml/sed_analyse.py" = ["E501"]  # long dict literals for the results record
+"src/nbml/doc_check.py" = ["E501"]  # report prose
+"src/nbml/sedm_final.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/sedm_analyse.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/sedm_cv.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/sedm_data.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/oslo_data.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/dementia_data.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/prep.py" = ["E501"]  # long result dictionaries / prose
+"src/nbml/sed_cv.py" = ["E501"]  # result dictionaries
+"src/nbml/sedm_report.py" = ["E501"]  # report prose

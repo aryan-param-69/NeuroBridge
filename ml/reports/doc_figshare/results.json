@@ -1,0 +1,907 @@
+{
+ "summary": {
+  "n_files": 98,
+  "n_ok": 96,
+  "n_failed": 2,
+  "errors": [
+   {
+    "id": "cp",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\Sem-7\\\\EegNeuro\\\\ml\\\\data\\\\doc_figshar"
+   },
+   {
+    "id": "ssy",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\Sem-7\\\\EegNeuro\\\\ml\\\\data\\\\doc_figshar"
+   }
+  ],
+  "verdict_counts": {
+   "awake-like": 75,
+   "sedated-like": 2,
+   "uncertain": 19
+  },
+  "p_sedated_quantiles": {
+   "5": 0.009784757858142257,
+   "25": 0.027368884067982435,
+   "50": 0.08158201351761818,
+   "75": 0.22411082684993744,
+   "95": 0.5632942914962769
+  },
+  "frac_unfamiliar": 1.0,
+  "mean_unfamiliar_epoch_fraction": 0.984375,
+  "signal_sd_uv_median": 8.824137857665853,
+  "bimodality_note": "A histogram of P(sedated-like) is saved; with no labels no group split is inferred."
+ },
+ "rows": [
+  {
+   "id": "bg",
+   "n_windows": 12,
+   "p_sedated": 0.08162818849086761,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 2.143575944662578
+  },
+  {
+   "id": "cgr",
+   "n_windows": 12,
+   "p_sedated": 0.1786765307188034,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.038157111961636
+  },
+  {
+   "id": "clg",
+   "n_windows": 12,
+   "p_sedated": 0.28722554445266724,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 13.74515314779243
+  },
+  {
+   "id": "clh",
+   "n_windows": 12,
+   "p_sedated": 0.055028706789016724,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 16.932487296754093
+  },
+  {
+   "id": "cmx",
+   "n_windows": 12,
+   "p_sedated": 0.11381586641073227,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.5833333333333334,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.146287355562456
+  },
+  {
+   "id": "cp",
+   "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\Sem-7\\\\EegNeuro\\\\ml\\\\data\\\\doc_figshar"
+  },
+  {
+   "id": "cxq",
+   "n_windows": 12,
+   "p_sedated": 0.12776120007038116,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 4.400605844599146
+  },
+  {
+   "id": "cyp",
+   "n_windows": 12,
+   "p_sedated": 0.2679847180843353,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.102265276748223
+  },
+  {
+   "id": "dgx",
+   "n_windows": 12,
+   "p_sedated": 0.4195678234100342,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 13.07022451484022
+  },
+  {
+   "id": "dj",
+   "n_windows": 12,
+   "p_sedated": 0.012237370014190674,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.979075276037731
+  },
+  {
+   "id": "djf",
+   "n_windows": 12,
+   "p_sedated": 0.011923931539058685,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.408112405711776
+  },
+  {
+   "id": "djm",
+   "n_windows": 12,
+   "p_sedated": 0.07156109064817429,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 4.602484913985102
+  },
+  {
+   "id": "dxw",
+   "n_windows": 12,
+   "p_sedated": 0.029747655615210533,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.367819674274104
+  },
+  {
+   "id": "fcl",
+   "n_windows": 12,
+   "p_sedated": 0.016103645786643028,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.060816711234116
+  },
+  {
+   "id": "gjc",
+   "n_windows": 12,
+   "p_sedated": 0.016145464032888412,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.9166666666666666,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.808733867900115
+  },
+  {
+   "id": "gjm",
+   "n_windows": 12,
+   "p_sedated": 0.18216800689697266,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.032192801538103
+  },
+  {
+   "id": "gn",
+   "n_windows": 12,
+   "p_sedated": 0.021003857254981995,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.405772833106494
+  },
+  {
+   "id": "gpn",
+   "n_windows": 12,
+   "p_sedated": 0.23330365121364594,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.635009412814961
+  },
+  {
+   "id": "gs",
+   "n_windows": 12,
+   "p_sedated": 0.34013691544532776,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 11.417907596090123
+  },
+  {
+   "id": "hj",
+   "n_windows": 12,
+   "p_sedated": 0.03359456732869148,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.27091006745673
+  },
+  {
+   "id": "hly",
+   "n_windows": 12,
+   "p_sedated": 0.05450313165783882,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.768419416640476
+  },
+  {
+   "id": "htw",
+   "n_windows": 12,
+   "p_sedated": 0.1195177510380745,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.230370559634387
+  },
+  {
+   "id": "hwr",
+   "n_windows": 12,
+   "p_sedated": 0.029252558946609497,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 0.8455616019008868
+  },
+  {
+   "id": "hyg",
+   "n_windows": 12,
+   "p_sedated": 0.11513469368219376,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.506736761000947
+  },
+  {
+   "id": "jgb",
+   "n_windows": 12,
+   "p_sedated": 0.307628333568573,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.347149936344491
+  },
+  {
+   "id": "jhy",
+   "n_windows": 12,
+   "p_sedated": 0.03635123744606972,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.8012140640487235
+  },
+  {
+   "id": "jlj",
+   "n_windows": 12,
+   "p_sedated": 0.06429297477006912,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.640858922631619
+  },
+  {
+   "id": "jml",
+   "n_windows": 12,
+   "p_sedated": 0.03152104839682579,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.752198650758148
+  },
+  {
+   "id": "jmz",
+   "n_windows": 12,
+   "p_sedated": 0.15153348445892334,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.41850593902161
+  },
+  {
+   "id": "jpj",
+   "n_windows": 12,
+   "p_sedated": 0.2236902117729187,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 17.39157037177138
+  },
+  {
+   "id": "jsn",
+   "n_windows": 12,
+   "p_sedated": 0.05214513838291168,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.47657265671266
+  },
+  {
+   "id": "jxn",
+   "n_windows": 12,
+   "p_sedated": 0.3100035786628723,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 17.830871584706625
+  },
+  {
+   "id": "jzh",
+   "n_windows": 12,
+   "p_sedated": 0.06161611154675484,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 1.3355053291697003
+  },
+  {
+   "id": "lbd",
+   "n_windows": 12,
+   "p_sedated": 0.00989489909261465,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.2214668947374845
+  },
+  {
+   "id": "ldx",
+   "n_windows": 12,
+   "p_sedated": 0.005501641426235437,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.990527554666876
+  },
+  {
+   "id": "lgd",
+   "n_windows": 12,
+   "p_sedated": 0.014818280003964901,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.142381955381081
+  },
+  {
+   "id": "ljx",
+   "n_windows": 12,
+   "p_sedated": 0.6665221452713013,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 12.128404708935559
+  },
+  {
+   "id": "lly",
+   "n_windows": 12,
+   "p_sedated": 0.1748398095369339,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.581486955920496
+  },
+  {
+   "id": "lrz",
+   "n_windows": 12,
+   "p_sedated": 0.03874882683157921,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.891556702501873
+  },
+  {
+   "id": "lxf",
+   "n_windows": 12,
+   "p_sedated": 0.6193892955780029,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 18.215781819758753
+  },
+  {
+   "id": "lxx",
+   "n_windows": 12,
+   "p_sedated": 0.10551724582910538,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.9166666666666666,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.503789069129262
+  },
+  {
+   "id": "lyf",
+   "n_windows": 12,
+   "p_sedated": 0.5630398392677307,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 13.911030342520302
+  },
+  {
+   "id": "lyz",
+   "n_windows": 12,
+   "p_sedated": 0.7374534606933594,
+   "verdict": "sedated-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 14.42738062209143
+  },
+  {
+   "id": "lyz118",
+   "n_windows": 12,
+   "p_sedated": 0.024587249383330345,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.9166666666666666,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.600642874008477
+  },
+  {
+   "id": "mhx",
+   "n_windows": 12,
+   "p_sedated": 0.1830936074256897,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 14.076536749378077
+  },
+  {
+   "id": "nmh",
+   "n_windows": 12,
+   "p_sedated": 0.28151416778564453,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.236254682529228
+  },
+  {
+   "id": "pjq",
+   "n_windows": 12,
+   "p_sedated": 0.20945875346660614,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.692695276960374
+  },
+  {
+   "id": "sgp",
+   "n_windows": 12,
+   "p_sedated": 0.15743015706539154,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.101857590325704
+  },
+  {
+   "id": "ssy",
+   "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\Sem-7\\\\EegNeuro\\\\ml\\\\data\\\\doc_figshar"
+  },
+  {
+   "id": "swm",
+   "n_windows": 12,
+   "p_sedated": 0.031996071338653564,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.9166666666666666,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.149733057108224
+  },
+  {
+   "id": "syb",
+   "n_windows": 12,
+   "p_sedated": 0.18556071817874908,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.524466477190391
+  },
+  {
+   "id": "szr-",
+   "n_windows": 12,
+   "p_sedated": 0.5640576481819153,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 18.376146758638235
+  },
+  {
+   "id": "szr_",
+   "n_windows": 12,
+   "p_sedated": 0.2698305547237396,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 18.93781358946688
+  },
+  {
+   "id": "tgy",
+   "n_windows": 12,
+   "p_sedated": 0.45270729064941406,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.051337565173958
+  },
+  {
+   "id": "wcm",
+   "n_windows": 12,
+   "p_sedated": 0.013544864021241665,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.039497968056664
+  },
+  {
+   "id": "wcs",
+   "n_windows": 12,
+   "p_sedated": 0.14232641458511353,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.114263024440984
+  },
+  {
+   "id": "wfx",
+   "n_windows": 12,
+   "p_sedated": 0.06374049931764603,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.778135910289811
+  },
+  {
+   "id": "wjl",
+   "n_windows": 12,
+   "p_sedated": 0.06895359605550766,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.65774816066483
+  },
+  {
+   "id": "wsc",
+   "n_windows": 12,
+   "p_sedated": 0.021119484677910805,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.897792266642835
+  },
+  {
+   "id": "wsr",
+   "n_windows": 12,
+   "p_sedated": 0.009441254660487175,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 3.9504661954038243
+  },
+  {
+   "id": "wss",
+   "n_windows": 12,
+   "p_sedated": 0.2810121178627014,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 0.5,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.4767261691342
+  },
+  {
+   "id": "wxf",
+   "n_windows": 12,
+   "p_sedated": 0.0038301534950733185,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.792567574718024
+  },
+  {
+   "id": "wxk",
+   "n_windows": 12,
+   "p_sedated": 0.06039797142148018,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 3.5062599169716697
+  },
+  {
+   "id": "wy",
+   "n_windows": 12,
+   "p_sedated": 0.08358937501907349,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.133234704794151
+  },
+  {
+   "id": "wzb",
+   "n_windows": 12,
+   "p_sedated": 0.027498001232743263,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.894180714458944
+  },
+  {
+   "id": "wzl",
+   "n_windows": 12,
+   "p_sedated": 0.13619135320186615,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 1.6650406224832612
+  },
+  {
+   "id": "wzn",
+   "n_windows": 12,
+   "p_sedated": 0.3415994644165039,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.747737101144315
+  },
+  {
+   "id": "xal",
+   "n_windows": 12,
+   "p_sedated": 0.16470257937908173,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 14.6394688192594
+  },
+  {
+   "id": "xgc",
+   "n_windows": 12,
+   "p_sedated": 0.21026556193828583,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 13.67729301809842
+  },
+  {
+   "id": "xl",
+   "n_windows": 12,
+   "p_sedated": 0.2438368946313858,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 2.69394469145849
+  },
+  {
+   "id": "xyd",
+   "n_windows": 12,
+   "p_sedated": 0.05040935054421425,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 1.9083801010121875
+  },
+  {
+   "id": "xyy",
+   "n_windows": 12,
+   "p_sedated": 0.09706335514783859,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 12.849678730094155
+  },
+  {
+   "id": "xzx",
+   "n_windows": 12,
+   "p_sedated": 0.025774775072932243,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 3.6307956429576023
+  },
+  {
+   "id": "xzy",
+   "n_windows": 12,
+   "p_sedated": 0.02075350284576416,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.844646968941934
+  },
+  {
+   "id": "yaq",
+   "n_windows": 12,
+   "p_sedated": 0.08152463287115097,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 11.550042388256392
+  },
+  {
+   "id": "ydy",
+   "n_windows": 12,
+   "p_sedated": 0.007625861093401909,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.293613103739322
+  },
+  {
+   "id": "ygy",
+   "n_windows": 12,
+   "p_sedated": 0.34454551339149475,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 14.842823360541427
+  },
+  {
+   "id": "yje",
+   "n_windows": 12,
+   "p_sedated": 0.22537267208099365,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 16.89901306536744
+  },
+  {
+   "id": "yw",
+   "n_windows": 12,
+   "p_sedated": 0.17495757341384888,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.974366795670083
+  },
+  {
+   "id": "yxp",
+   "n_windows": 12,
+   "p_sedated": 0.16985176503658295,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 12.814431430925053
+  },
+  {
+   "id": "yym",
+   "n_windows": 12,
+   "p_sedated": 0.01680995710194111,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.929198968766135
+  },
+  {
+   "id": "zbj",
+   "n_windows": 12,
+   "p_sedated": 0.06923642009496689,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.9166666666666666,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.311679531833624
+  },
+  {
+   "id": "zcg",
+   "n_windows": 12,
+   "p_sedated": 0.7832923531532288,
+   "verdict": "sedated-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 12.69959428967238
+  },
+  {
+   "id": "zcy",
+   "n_windows": 12,
+   "p_sedated": 0.46687519550323486,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 16.716034861637223
+  },
+  {
+   "id": "zff",
+   "n_windows": 12,
+   "p_sedated": 0.01679867133498192,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 8.27886064166779
+  },
+  {
+   "id": "zgl",
+   "n_windows": 12,
+   "p_sedated": 0.024009250104427338,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 0.8333333333333334,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.655315530110515
+  },
+  {
+   "id": "zgp",
+   "n_windows": 12,
+   "p_sedated": 0.02698153257369995,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 3.2091021317797153
+  },
+  {
+   "id": "zgs",
+   "n_windows": 12,
+   "p_sedated": 0.08153583854436874,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 2.624484957859399
+  },
+  {
+   "id": "zhq",
+   "n_windows": 12,
+   "p_sedated": 0.535664975643158,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 16.898421696654452
+  },
+  {
+   "id": "zjz",
+   "n_windows": 12,
+   "p_sedated": 0.0194287970662117,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 9.225277811507402
+  },
+  {
+   "id": "zly",
+   "n_windows": 12,
+   "p_sedated": 0.14784324169158936,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 11.371071434769556
+  },
+  {
+   "id": "zsh",
+   "n_windows": 12,
+   "p_sedated": 0.009454334154725075,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 4.7064598045941075
+  },
+  {
+   "id": "zwd",
+   "n_windows": 12,
+   "p_sedated": 0.023213058710098267,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 7.253512358506422
+  },
+  {
+   "id": "zxm",
+   "n_windows": 12,
+   "p_sedated": 0.07116232067346573,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.7400187653594745
+  },
+  {
+   "id": "zyl",
+   "n_windows": 12,
+   "p_sedated": 0.04253382980823517,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 15.321205020900878
+  },
+  {
+   "id": "zym",
+   "n_windows": 12,
+   "p_sedated": 0.06968856602907181,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 10.475439127601703
+  },
+  {
+   "id": "zyx",
+   "n_windows": 12,
+   "p_sedated": 0.020453399047255516,
+   "verdict": "awake-like",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 5.1079578693461
+  },
+  {
+   "id": "zzl",
+   "n_windows": 12,
+   "p_sedated": 0.2868404984474182,
+   "verdict": "uncertain",
+   "unfamiliar_fraction": 1.0,
+   "unfamiliar": true,
+   "signal_sd_uv": 6.120605304454478
+  }
+ ]
+}

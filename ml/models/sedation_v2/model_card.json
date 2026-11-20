@@ -1,0 +1,90 @@
+{
+ "name": "sedation_level",
+ "version": "sedation_v2",
+ "status": "staging",
+ "intended_use": "Research and decision SUPPORT: how much does a resting EEG resemble awake vs propofol-sedated EEG of healthy volunteers (two laboratories).",
+ "not_for": [
+  "diagnosis",
+  "detecting consciousness or covert awareness in patients",
+  "measuring recovery",
+  "any clinical decision on its own"
+ ],
+ "training_data": {
+  "datasets": [
+   "Cambridge (Chennu 2016, doi:10.17863/CAM.68959)",
+   "Oslo (OpenNeuro ds005620)"
+  ],
+  "subjects": 40,
+  "recordings_used": 131,
+  "epochs": 2814,
+  "population": "healthy adults under propofol, two laboratories"
+ },
+ "labels": "sedated = moderate sedation (Cambridge) or rest under propofol before an awakening (Oslo); awake = baseline/recovery/eyes-closed awake; Cambridge mild not used",
+ "model": "lightgbm",
+ "features": 68,
+ "feature_set": "primary",
+ "channels": [
+  "Fp1",
+  "Fp2",
+  "F7",
+  "F3",
+  "Fz",
+  "F4",
+  "F8",
+  "T7",
+  "C3",
+  "Cz",
+  "C4",
+  "T8",
+  "P7",
+  "P3",
+  "Pz",
+  "P4",
+  "P8",
+  "O1",
+  "O2"
+ ],
+ "epoch_seconds": 10,
+ "validation": {
+  "scheme": "pooled leave-one-person-out (40 people) + cross-site tests",
+  "balanced_accuracy": 0.9705399061032863,
+  "ba_ci95": [
+   0.9383561643835616,
+   0.993421052631579
+  ],
+  "auc": 0.9915492957746479,
+  "permutation_p": 0.009900990099009901,
+  "cross_site": [
+   {
+    "train": "Cambridge",
+    "test": "Oslo",
+    "balanced_accuracy": 0.9803921568627452,
+    "ba_ci95": [
+     0.95,
+     1.0
+    ]
+   },
+   {
+    "train": "Oslo",
+    "test": "Cambridge",
+    "balanced_accuracy": 0.875,
+    "ba_ci95": [
+     0.775,
+     0.95
+    ]
+   }
+  ]
+ },
+ "known_limits": [
+  "40 healthy people in two laboratories; wide intervals",
+  "never validated on patients; EEG slowing in dementia can look sedated-like",
+  "other devices/montages may look unfamiliar",
+  "Oslo sedation depth ungraded"
+ ],
+ "software": {
+  "python": "3.12.13",
+  "sklearn": "1.9.1",
+  "mne": "1.13.2"
+ },
+ "model_sha256": "8bcd455de73b2324f96cdd1f5b245db39435fc0dac558b66cf3912360d486051"
+}
