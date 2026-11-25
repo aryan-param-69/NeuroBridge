@@ -1,0 +1,207 @@
+{
+ "pool": {
+  "cambridge": {
+   "epochs": 3082,
+   "recordings": 80
+  },
+  "oslo": {
+   "epochs": 512,
+   "recordings": 71
+  },
+  "dementia": {
+   "epochs": 6260,
+   "recordings": 88
+  },
+  "eegmmidb": {
+   "epochs": 361,
+   "recordings": 95
+  },
+  "figshare": {
+   "epochs": 1152,
+   "recordings": 96
+  }
+ },
+ "current": {
+  "dementia": {
+   "n_recordings": 88,
+   "epoch_flag_rate": 0.2329073482428115,
+   "recording_unfamiliar_rate": 0.32954545454545453
+  },
+  "eegmmidb": {
+   "n_recordings": 95,
+   "epoch_flag_rate": 0.26869806094182824,
+   "recording_unfamiliar_rate": 0.3368421052631579
+  },
+  "figshare": {
+   "n_recordings": 96,
+   "epoch_flag_rate": 0.421875,
+   "recording_unfamiliar_rate": 0.46875
+  }
+ },
+ "lodo": [
+  {
+   "pct": 99.0,
+   "lodo_false_flag": {
+    "cambridge": {
+     "n_recordings": 80,
+     "epoch_flag_rate": 0.012978585334198572,
+     "recording_unfamiliar_rate": 0.025
+    },
+    "oslo": {
+     "n_recordings": 71,
+     "epoch_flag_rate": 0.193359375,
+     "recording_unfamiliar_rate": 0.28169014084507044
+    },
+    "dementia": {
+     "n_recordings": 88,
+     "epoch_flag_rate": 0.09616613418530351,
+     "recording_unfamiliar_rate": 0.125
+    },
+    "eegmmidb": {
+     "n_recordings": 95,
+     "epoch_flag_rate": 0.036011080332409975,
+     "recording_unfamiliar_rate": 0.021052631578947368
+    }
+   },
+   "mean_lodo_false_rate": 0.11318569310600446,
+   "corruption_detection": {
+    "clean": 0.0,
+    "muscle_noise": 1.0,
+    "white_noise": 1.0,
+    "three_dead_channels": 1.0,
+    "shuffled_electrodes": 0.125,
+    "one_noisy_electrode": 0.775
+   },
+   "mean_detection": 0.78,
+   "clean_false_flag_eegmmidb_closed": 0.0,
+   "score": 0.6668143068939956
+  },
+  {
+   "pct": 99.5,
+   "lodo_false_flag": {
+    "cambridge": {
+     "n_recordings": 80,
+     "epoch_flag_rate": 0.004542504866969501,
+     "recording_unfamiliar_rate": 0.0
+    },
+    "oslo": {
+     "n_recordings": 71,
+     "epoch_flag_rate": 0.138671875,
+     "recording_unfamiliar_rate": 0.2535211267605634
+    },
+    "dementia": {
+     "n_recordings": 88,
+     "epoch_flag_rate": 0.06277955271565495,
+     "recording_unfamiliar_rate": 0.09090909090909091
+    },
+    "eegmmidb": {
+     "n_recordings": 95,
+     "epoch_flag_rate": 0.01662049861495845,
+     "recording_unfamiliar_rate": 0.010526315789473684
+    }
+   },
+   "mean_lodo_false_rate": 0.088739133364782,
+   "corruption_detection": {
+    "clean": 0.0,
+    "muscle_noise": 1.0,
+    "white_noise": 1.0,
+    "three_dead_channels": 1.0,
+    "shuffled_electrodes": 0.075,
+    "one_noisy_electrode": 0.775
+   },
+   "mean_detection": 0.77,
+   "clean_false_flag_eegmmidb_closed": 0.0,
+   "score": 0.681260866635218
+  },
+  {
+   "pct": 99.9,
+   "lodo_false_flag": {
+    "cambridge": {
+     "n_recordings": 80,
+     "epoch_flag_rate": 0.0003244646333549643,
+     "recording_unfamiliar_rate": 0.0
+    },
+    "oslo": {
+     "n_recordings": 71,
+     "epoch_flag_rate": 0.0625,
+     "recording_unfamiliar_rate": 0.08450704225352113
+    },
+    "dementia": {
+     "n_recordings": 88,
+     "epoch_flag_rate": 0.019488817891373803,
+     "recording_unfamiliar_rate": 0.011363636363636364
+    },
+    "eegmmidb": {
+     "n_recordings": 95,
+     "epoch_flag_rate": 0.0,
+     "recording_unfamiliar_rate": 0.0
+    }
+   },
+   "mean_lodo_false_rate": 0.023967669654289373,
+   "corruption_detection": {
+    "clean": 0.0,
+    "muscle_noise": 1.0,
+    "white_noise": 1.0,
+    "three_dead_channels": 0.975,
+    "shuffled_electrodes": 0.0,
+    "one_noisy_electrode": 0.575
+   },
+   "mean_detection": 0.71,
+   "clean_false_flag_eegmmidb_closed": 0.0,
+   "score": 0.6860323303457105
+  }
+ ],
+ "corruption": {},
+ "external_figshare": {
+  "n_recordings": 96,
+  "epoch_flag_rate": 0.009548611111111112,
+  "recording_unfamiliar_rate": 0.010416666666666666
+ },
+ "chosen_pct": 99.9,
+ "final_in_pool": {
+  "cambridge": {
+   "n_recordings": 80,
+   "epoch_flag_rate": 0.0003244646333549643,
+   "recording_unfamiliar_rate": 0.0
+  },
+  "oslo": {
+   "n_recordings": 71,
+   "epoch_flag_rate": 0.0234375,
+   "recording_unfamiliar_rate": 0.04225352112676056
+  },
+  "dementia": {
+   "n_recordings": 88,
+   "epoch_flag_rate": 0.0011182108626198084,
+   "recording_unfamiliar_rate": 0.0
+  },
+  "eegmmidb": {
+   "n_recordings": 95,
+   "epoch_flag_rate": 0.0,
+   "recording_unfamiliar_rate": 0.0
+  }
+ },
+ "final_components": 14,
+ "v2_frozen_on_other_sources": {
+  "eegmmidb": {
+   "n_recordings": 95,
+   "verdicts": {
+    "awake-like": 78,
+    "sedated-like": 0,
+    "uncertain": 17
+   },
+   "unfamiliar_recordings": 0
+  },
+  "figshare": {
+   "n_recordings": 96,
+   "verdicts": {
+    "awake-like": 47,
+    "sedated-like": 4,
+    "uncertain": 45
+   },
+   "unfamiliar_recordings": 1
+  }
+ },
+ "deployed": {
+  "model_sha256": "6c404f1ac1e7e2798f64d96232f2c472edfa4705e5f80af1bf6b3998964f7da0"
+ }
+}

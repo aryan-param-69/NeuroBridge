@@ -10,7 +10,7 @@ from datetime import UTC, datetime, timedelta
 import jwt
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet, InvalidToken, MultiFernet
 
 from app.core.config import get_settings
 
@@ -80,13 +80,26 @@ def hash_refresh_token(raw: str) -> str:
 
 # ---- Secret encryption (patient identifiers, original EEG files) ---------
 
-def _fernet() -> Fernet:
+def _keys() -> list[bytes]:
     s = get_settings()
     if s.encryption_key:
-        return Fernet(s.encryption_key.encode())
+        return [s.encryption_key.encode(), *[k.strip().encode() for k in s.encryption_key_previous.split(",") if k.strip()]]
     # Development/test only: derive a key from SECRET_KEY. Production refuses this.
-    digest = hashlib.sha256(s.secret_key.encode()).digest()
-    return Fernet(base64.urlsafe_b64encode(digest))
+    return [base64.urlsafe_b64encode(hashlib.sha256(s.secret_key.encode()).digest())]
+
+
+def _fernet() -> MultiFernet:
+    """The first key encrypts; any listed key (current, then ENCRYPTION_KEY_PREVIOUS) can decrypt: this enables key rotation."""
+    return MultiFernet([Fernet(k) for k in _keys()])
+
+
+def is_under_current_key(token: bytes) -> bool:
+    """True if the token decrypts with the current (first) key, i.e. it needs no rotation."""
+    try:
+        Fernet(_keys()[0]).decrypt(token)
+        return True
+    except InvalidToken:
+        return False
 
 
 def encrypt_secret(plain: str) -> bytes:
@@ -95,6 +108,11 @@ def encrypt_secret(plain: str) -> bytes:
 
 def decrypt_secret(token: bytes) -> str:
     return _fernet().decrypt(token).decode()
+
+
+def rotate_secret(token: bytes) -> bytes:
+    """Re-encrypt a token under the current key (decrypts with any accepted key)."""
+    return _fernet().rotate(token)
 
 
 # ---- Blind indexes (searchable keyed hashes of identifiers) ---------------

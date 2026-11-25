@@ -78,13 +78,38 @@
  "known_limits": [
   "40 healthy people in two laboratories; wide intervals",
   "never validated on patients; EEG slowing in dementia can look sedated-like",
-  "other devices/montages may look unfamiliar",
-  "Oslo sedation depth ungraded"
+  "Oslo sedation depth ungraded",
+  "unfamiliar-EEG flag catches noise, dead channels and many bad electrodes but NOT shuffled electrode order (region averages hide it); check the montage"
  ],
  "software": {
   "python": "3.12.13",
   "sklearn": "1.9.1",
   "mne": "1.13.2"
  },
- "model_sha256": "8bcd455de73b2324f96cdd1f5b245db39435fc0dac558b66cf3912360d486051"
+ "model_sha256": "6c404f1ac1e7e2798f64d96232f2c472edfa4705e5f80af1bf6b3998964f7da0",
+ "unfamiliar_eeg_detector": {
+  "method": "PCA, Hotelling T-squared and SPE; epoch flagged above the training percentile; recording called unfamiliar if more than 25 % of its epochs are flagged; non-finite features always flagged",
+  "reference_sources": [
+   "Cambridge propofol",
+   "Oslo propofol",
+   "routine clinical EEG (ds004504)",
+   "EEGMMIDB resting EEG"
+  ],
+  "percentile": 99.9,
+  "false_flag_on_unseen_source": {
+   "cambridge": 0.0,
+   "oslo": 0.085,
+   "dementia": 0.011,
+   "eegmmidb": 0.0
+  },
+  "detects_corruptions": {
+   "clean": 0.0,
+   "muscle_noise": 1.0,
+   "white_noise": 1.0,
+   "three_dead_channels": 0.975,
+   "shuffled_electrodes": 0.0,
+   "one_noisy_electrode": 0.575
+  },
+  "external_patient_type_figshare_unfamiliar": 0.010416666666666666
+ }
 }

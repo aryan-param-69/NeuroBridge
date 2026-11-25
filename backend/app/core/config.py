@@ -8,7 +8,7 @@ INSECURE_DEFAULT_SECRET = "dev-only-insecure-secret-change-me"
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    app_name: str = "NeuroBridge AI"
+    app_name: str = "NeuroTrace"
     app_version: str = "0.1.0"
     environment: str = "development"  # development | test | production
 
@@ -42,6 +42,12 @@ class Settings(BaseSettings):
 
     cookie_secure: bool = False
     cors_origins: str = "http://localhost:5173"
+
+    encryption_key_previous: str = ""  # comma-separated retired keys: still accepted for decryption, never used to encrypt (key rotation)
+    trusted_proxies: int = 0  # number of reverse proxies in front of the API; the client address is taken from X-Forwarded-For accordingly
+    rate_limit_enabled: bool = True
+    rate_limit_auth_per_minute: int = 20  # login + token refresh, per client address
+    rate_limit_api_per_minute: int = 1200  # every other API call, per client address
 
     @property
     def is_production(self) -> bool:

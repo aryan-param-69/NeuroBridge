@@ -17,13 +17,18 @@ services:
     env_file: .env
     environment:
       MONGO_URL: mongodb://neurobridge:${MONGO_PASSWORD}@mongo:27017/?authSource=admin
+      TRUSTED_PROXIES: ${TRUSTED_PROXIES:-1}  # nginx in the frontend container; 2 when the Caddy TLS proxy is added
     depends_on:
       mongo:
         condition: service_healthy
     ports:
       - "8000:8000"
+    volumes:
+      - storage:/srv/storage  # encrypted originals, de-identified copies, processed signals (back this up together with the database)
+      - ./backups:/srv/backups  # written by backend/scripts/backup.py via deploy/backup.sh
+      - ./ml/models:/ml/models:ro  # trained models; the app resolves ../ml/models from /srv and checks each file's SHA-256 before loading
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/ready')"]
       interval: 10s
       retries: 10
 
@@ -36,3 +41,4 @@ services:
 
 volumes:
   mongodata:
+  storage:

@@ -30,5 +30,7 @@ def _stats(m: dict, X: np.ndarray):
 
 
 def flags(m: dict, X: np.ndarray) -> np.ndarray:
-    t2, spe = _stats(m, X)
-    return (t2 > m["thr"]) | (spe > m["thr_spe"])
+    """True for an unfamiliar epoch. A feature vector that is not finite (e.g. from a dead channel) can never be familiar."""
+    bad = ~np.isfinite(X).all(axis=1)
+    t2, spe = _stats(m, np.where(np.isfinite(X), X, 0.0))
+    return (t2 > m["thr"]) | (spe > m["thr_spe"]) | bad

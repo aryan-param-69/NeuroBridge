@@ -1,6 +1,6 @@
 # NeuroTrace
 
-*(code name in the packages, database names and UI: NeuroBridge AI)*
+*(internal names such as the MongoDB databases `neurobridge*` and the package names keep the project's earlier code name, NeuroBridge)*
 
 Explainable EEG-based patient monitoring and longitudinal neurophysiological analysis platform.
 Design specification: [docs/README.md](docs/README.md) · roadmap: [docs/07-testing-roadmap-limitations.md](docs/07-testing-roadmap-limitations.md) ·
@@ -27,7 +27,9 @@ database decision: [ADR 0001 (MongoDB)](docs/adr/0001-mongodb-as-primary-databas
 | **P7 Reports** | **Done** (versioned, signed = immutable, SHA-256, HTML export; `test_reports.py`) |
 | **P9 AI analysis** (sedation model in the website, SHAP, uncertainty) | **Done for the sedation model only**, flagged *staging*; never validated on patients (`test_ai_sedation.py`) |
 | Cross-patient pages (Recordings, Assessments, Comparisons, Reports, AI analysis) | Done |
-| P10 hardening | Not started |
+| P10 hardening (basics) | **Partly done:** per-address rate limiting, readiness check, key rotation, backup/restore with checksums, HTTPS proxy files, dependency audits (see [docs/OPERATIONS.md](docs/OPERATIONS.md)). **Not done:** second factor, Docker/HTTPS never run, security review |
+| Unfamiliar-EEG detector recalibration (model v2) | Done: false flags on unseen sources about 2 % (was 33-47 %); see below |
+| Patient-data pilot (vegetative vs minimally conscious, 42 patients) | Done, **negative result** (AUC 0.56, p = 0.32); see below |
 
 Storage is **MongoDB** (database `neurobridge`; ML results in `neurobridge_ml`). Originals are stored encrypted on disk.
 
@@ -40,7 +42,7 @@ Storage is **MongoDB** (database `neurobridge`; ML results in `neurobridge_ml`).
 | Original is protected | AES-256-GCM chunked encryption; tamper / truncation / reordering detected (tests); filenames and header text are never stored |
 | De-identified copy | header patient/recording fields blanked; still opens in MNE |
 | Viewer paging is fast | windowed reads (`get_data(start, stop)`) + min/max decimation that keeps peaks; checked in the browser on real data |
-| `/signal` p95 < 300 ms on a 10 s × 64 ch window | **Not yet measured** (functional only; correctness tests pass) |
+| `/signal` p95 < 300 ms on a 10 s × 64 ch window | **Measured: p95 69 ms, median 60 ms** (40 requests, real 64-ch EEGMMIDB file, in-process test client, no network; `tests/test_signal_speed.py`) |
 | 24 h file viewable with memory < 2 GB | **Not yet tested** (windowed reads are designed for it; upload assembles in memory-light streaming but no long file was tried) |
 
 ### Phase 3 criteria
@@ -111,7 +113,7 @@ trained on the open Cambridge propofol dataset (Chennu et al. 2016, 20 healthy p
 (relative band power, Hjorth, spectral/permutation entropy, 1/f slope, wPLI; 5 regions + whole head) from the 19 standard channels. Six models (logistic regression, SVM, random forest, gradient boosting, XGBoost,
 LightGBM) with leave-one-person-out nested CV: recording-level balanced accuracy 0.89-0.94, **all six statistically tied** (the pre-specified rule picked XGBoost, 0.938, 95 % CI 0.86-1.00, permutation p = 0.010).
 The output rises with dose on a level it was never trained on (mild sedation) and correlates with plasma propofol (rho = 0.72). Conformal sets give 83 % coverage (target 80 %), 12 % "uncertain".
-SHAP is computed on held-out people. **Not shown or claimed:** anything about patients. The unfamiliar-EEG detector flagged 100 % of recordings from another site (EEGMMIDB), where the model still called 96 % of awake people not sedated;
+SHAP is computed on held-out people. **Not shown or claimed:** anything about patients. (v1 only) The unfamiliar-EEG detector flagged 100 % of recordings from another site (EEGMMIDB), where the model still called 96 % of awake people not sedated;
 Platt calibration slightly worsened an already reasonable XGBoost. The model is saved as `ml/models/sedation_v1/` (model card, SHA-256) and registered as *staging* in `neurobridge_ml.model_registry`; the website can use it (setting `sedation_model`).
 
 **Multi-site sedation model v2** (`ml/reports/sedation_multisite/`, protocol in [PRESPEC.md](ml/reports/sedation_multisite/PRESPEC.md), written before training):
@@ -135,9 +137,15 @@ Signing makes it immutable; an amendment is a new version with a reason; every v
 
 **AI analysis.** The sedation model (above) runs inside the backend on a processed run: the model file is loaded only from the configured model directory and only after its SHA-256 matches the model card (a pickle can run code). It needs the 19 standard channels and at least one minute of clean 10-s windows, otherwise it refuses with a reason.
 Each run stores an immutable prediction record (model version + SHA, probability, conformal answer set, unfamiliar-EEG fraction, SHAP reasons, reliability warnings). Only clinicians start runs; researchers see a pseudonymised list (consented patients, no dates). The inference code is vendored from `ml/` (`backend/app/ml`) and a golden-file test fails if the two copies drift.
-**On every non-Cambridge recording the "unfamiliar EEG" flag fires, as it did for EEGMMIDB and for the open Figshare patient set; treat every output as unreliable until thresholds are recalibrated on target recordings.**
+The "unfamiliar EEG" flag of model v2 was recalibrated (next section); it is quiet on ordinary resting EEG and loud on noise or dead channels, but it does **not** catch shuffled electrode order, and a quiet flag does not make the answer valid for patients.
 
 **Open Figshare patient set** (DOI 10.6084/m9.figshare.23552964; 98 recordings, 2 without a data file): no labels exist, so it is used only as a pipeline/behaviour check ([report](ml/reports/doc_figshare/REPORT.md)), not for accuracy.
+
+## Recalibrated unfamiliar-EEG detector and the patient-data pilot
+
+**Detector (model v2, `ml/reports/ood_recal/REPORT.md`).** The old detector was fitted on the two propofol laboratories only and called 33 % (routine clinical EEG), 34 % (EEGMMIDB) and 47 % (Figshare) of recordings from other sources "unfamiliar". It is now fitted on four sources (both propofol sets, routine clinical EEG, EEGMMIDB) with the threshold chosen by leave-one-dataset-out: about 2.4 % false flags on a source it has never seen, 1 of 96 on the Figshare patient-type set (never used for fitting), 97-100 % detection of added muscle noise, white noise and dead channels, 57 % for one very noisy electrode, and **0 % for shuffled electrode order** (region averages hide it). Feature vectors that are not finite are always flagged. Only the detector inside the v2 bundle changed (new SHA-256).
+
+**Patient-data pilot (`ml/reports/psg_doc/`, plan in `PRESPEC.md` written before any feature was computed).** Mendeley dataset 6wx4n25h4v: 42 patients (30 vegetative state, 12 minimally conscious), median 6 h of EEG, six channels. Leave-one-patient-out logistic regression on 14 interpretable features: AUC 0.56 (95 % CI 0.36-0.75), permutation p = 0.32; the pre-set success criterion (AUC above 0.65) was **not met**. Uncontrolled: sleep, medication, age, cause of injury, recording references. The sedation models were not used (these files do not have the 19 channels) and none of this changes the *staging* status.
 
 ## Repository layout
 
@@ -145,8 +153,8 @@ Each run stores an immutable prediction record (model version + SHA, probability
 .
 ├── backend/            FastAPI service (Python 3.12): auth, patients, EEG upload, processing, features, assessments,
 │   ├── app/              comparisons, AI analysis, reports; app/eeg = signal processing, app/ml = model inference
-│   ├── tests/            319 tests (pytest); needs a local MongoDB
-│   └── scripts/          create_user.py (first admin / clinician accounts)
+│   ├── tests/            331 tests (pytest); needs a local MongoDB
+│   └── scripts/          create_user.py, seed_demo.py, backup.py, restore.py, rotate_keys.py
 ├── frontend/           React 19 + TypeScript + Mantine + ECharts single-page app (vitest tests)
 ├── ml/                 offline research workspace (training, validation, reports); never deployed with the app
 │   ├── src/nbml/         data loaders, features, nested CV, models, SHAP, calibration, reports
@@ -154,9 +162,9 @@ Each run stores an immutable prediction record (model version + SHA, probability
 │   ├── reports/          generated results, figures and PRESPEC files (pre-specified protocols)
 │   └── models/           trained model + model card (SHA-256 checked before loading)
 ├── data/               datasets and caches (git-ignored; fetched by scripts/download_datasets.py)
-├── scripts/            download_datasets.py
-├── docs/               design documents, ADRs, project overview, viva notes, presentation (docs/presentation)
-├── docker-compose.yml  MongoDB + API + web (written, not yet run)
+├── scripts/            download_datasets.py (--list shows every dataset, licence and folder)
+├── docs/               design specification (01-07), ADRs, OPERATIONS.md
+├── docker-compose.yml  MongoDB + API + web (written, not yet run); docker-compose.tls.yml + deploy/Caddyfile add HTTPS (also not run)
 └── .github/workflows/  CI: backend, frontend, ml
 ```
 
@@ -173,7 +181,11 @@ uv run uvicorn app.main:app --port 8000
 # second terminal (proxies /api to port 8000)
 cd frontend; npm install; npm run dev        # http://localhost:5173
 ```
+Quick demo (fictional data only): `$env:NB_DEMO_PASSWORD = "a-long-demo-password"; uv run python -m scripts.seed_demo` in `backend/` creates
+`admin@example.com`, `clinician@example.com` and one fictional patient. Then upload a public EDF (e.g. from PhysioNet EEGMMIDB) in the web app.
+
 Sign in with the e-mail and password you set. **There is no second factor** (it was removed on request): add one again before any real clinical use.
+Backups, key rotation, rate limits and HTTPS: see [docs/OPERATIONS.md](docs/OPERATIONS.md).
 
 ## Tests
 
@@ -196,8 +208,8 @@ selection rule, label-permutation test. Results, model registry and out-of-fold 
 - Background jobs run in an in-process thread pool with job records in MongoDB (no Redis/Celery here); jobs interrupted by a restart are marked failed.
 - Processing loads a whole recording into memory (guarded by `max_process_bytes`); upload completion still parses the file within the request.
 - Quality assessment samples long recordings (30 s chunks, up to 60 min).
-- Login is password-only (no second factor) with per-account lockout after 5 failures; there is no per-IP rate limiting.
-- Docker/Compose files are written for MongoDB but **never run** (Docker is not installed here); CI workflow not yet run on GitHub.
+- Login is password-only (no second factor) with per-account lockout after 5 failures and per-address rate limiting (in memory, per process: it resets on restart and is not shared between workers).
+- Docker/Compose and the HTTPS (Caddy) files are written but **never run** (Docker is not installed here). The CI steps were run locally; the workflow itself has not yet run on GitHub.
 - Model files are pickles: keep `model_dir` writable only by the deployment; the SHA-256 check stops accidental swaps, not a person with write access to both the file and its card.
 - EDF headers often carry a wrong date (the PhysioNet files say 2009): such recordings are flagged on the timeline; the comparison and trend views order by the header date.
-- Set `ENCRYPTION_KEY`, `HMAC_KEY`, `SECRET_KEY` before real use. Losing `ENCRYPTION_KEY` makes identifiers and original recordings unrecoverable; key rotation is not implemented.
+- Set `ENCRYPTION_KEY`, `HMAC_KEY`, `SECRET_KEY` before real use. Losing `ENCRYPTION_KEY` makes identifiers and original recordings unrecoverable. Rotation of `ENCRYPTION_KEY` is supported (`scripts/rotate_keys.py`); rotating `HMAC_KEY` (search tokens) is not automated. Backups never contain keys.

@@ -58,10 +58,14 @@ def processed_path(patient_id: uuid.UUID, run_id: uuid.UUID) -> Path:
     return root() / "derived" / str(patient_id) / str(run_id) / "processed_raw.fif"
 
 
-def _key(salt: bytes) -> bytes:
+def _masters() -> list[bytes]:
+    """Current master key first, then retired ones (ENCRYPTION_KEY_PREVIOUS), which may only decrypt."""
     s = get_settings()
-    master = (s.encryption_key or s.secret_key).encode()
-    return HKDF(algorithm=hashes.SHA256(), length=32, salt=salt, info=b"neurobridge-file-v1").derive(master)
+    return [(s.encryption_key or s.secret_key).encode(), *[k.strip().encode() for k in s.encryption_key_previous.split(",") if k.strip()]]
+
+
+def _key(salt: bytes, master: bytes | None = None) -> bytes:
+    return HKDF(algorithm=hashes.SHA256(), length=32, salt=salt, info=b"neurobridge-file-v1").derive(master or _masters()[0])
 
 
 def _nonce(index: int) -> bytes:
@@ -104,8 +108,9 @@ def decrypt_stream(src: Path) -> Iterator[bytes]:
     with open(src, "rb") as f:
         head = f.read(20)
         if len(head) != 20 or head[:4] != MAGIC:
-            raise StorageError("not an encrypted NeuroBridge file")
-        aes = AESGCM(_key(head[4:]))
+            raise StorageError("not an encrypted NeuroTrace file")
+        candidates = [AESGCM(_key(head[4:], m)) for m in _masters()]
+        aes = None  # chosen on the first block: the first accepted key that authenticates it
         index = 0
         hdr = f.read(4)
         while hdr:
@@ -116,11 +121,59 @@ def decrypt_stream(src: Path) -> Iterator[bytes]:
             nxt = f.read(4)
             last = not nxt
             try:
-                yield aes.decrypt(_nonce(index), ct, _aad(index, last))
+                if aes is None:
+                    for cand in candidates:
+                        try:
+                            plain = cand.decrypt(_nonce(index), ct, _aad(index, last))
+                        except InvalidTag:
+                            continue
+                        aes = cand
+                        break
+                    else:
+                        raise InvalidTag
+                else:
+                    plain = aes.decrypt(_nonce(index), ct, _aad(index, last))
+                yield plain
             except InvalidTag:
                 raise StorageError("file failed integrity check (modified, reordered or truncated)") from None
             index += 1
             hdr = nxt
+
+
+def uses_current_key(path: Path) -> bool:
+    """True if the first block of this encrypted file authenticates under the current master key."""
+    with open(path, "rb") as f:
+        head = f.read(20)
+        if len(head) != 20 or head[:4] != MAGIC:
+            raise StorageError("not an encrypted NeuroTrace file")
+        (n,) = struct.unpack(">I", f.read(4))
+        ct = f.read(n)
+        last = not f.read(4)
+    try:
+        AESGCM(_key(head[4:], _masters()[0])).decrypt(_nonce(0), ct, _aad(0, last))
+        return True
+    except InvalidTag:
+        return False
+
+
+def rotate_file(path: Path) -> None:
+    """Re-encrypt a file under the current master key and a fresh salt, block by block (no plaintext is written to disk)."""
+    import os
+
+    salt = os.urandom(16)
+    aes = AESGCM(_key(salt))
+    tmp = path.with_suffix(".rot")
+    it = decrypt_stream(path)
+    with open(tmp, "wb") as out:
+        out.write(MAGIC + salt)
+        cur = next(it, None)
+        i = 0
+        while cur is not None:
+            nxt = next(it, None)
+            ct = aes.encrypt(_nonce(i), cur, _aad(i, nxt is None))
+            out.write(struct.pack(">I", len(ct)) + ct)
+            cur, i = nxt, i + 1
+    tmp.replace(path)
 
 
 def sha256_of_stream(chunks: Iterator[bytes]) -> str:

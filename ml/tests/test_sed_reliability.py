@@ -116,3 +116,14 @@ def test_prediction_set_logic_and_verdicts():
             P.predict_epochs(bundle, np.zeros((4, 19, 100)), 250.0)
         finally:
             mod.extract = orig
+
+
+def test_ood_detector_treats_non_finite_features_as_unfamiliar():
+    rng = np.random.default_rng(5)
+    m = A.ood_fit(rng.normal(size=(500, 5)))
+    X = rng.normal(size=(4, 5))
+    X[1, 2] = np.nan
+    X[2, 0] = np.inf
+    fl = ood.flags(m, X)
+    assert fl[1] and fl[2]  # a dead channel can give NaN or infinity; such an epoch must never pass as familiar
+    assert not np.isnan(ood._stats(m, np.where(np.isfinite(X), X, 0.0))[0]).any()

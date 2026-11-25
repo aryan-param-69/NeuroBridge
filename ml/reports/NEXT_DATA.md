@@ -1,4 +1,4 @@
-# Is more data needed? — dataset advice for NeuroBridge AI
+# Is more data needed? — dataset advice for NeuroTrace
 
 Short answer: **yes, but different data for different goals.** EEGMMIDB is a good *benchmark* for motor-imagery
 algorithms and for testing the EDF pipeline. It cannot, by design, support the project's clinical aims

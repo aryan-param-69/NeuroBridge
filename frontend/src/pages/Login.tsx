@@ -30,8 +30,8 @@ export default function Login() {
       <div className="login-card">
         <div className="card">
           <div className="brand" style={{ padding: '0 0 20px' }}>
-            <div className="brand-mark">NB</div>
-            NeuroBridge AI
+            <div className="brand-mark">NT</div>
+            NeuroTrace
           </div>
 
           {error && <div className="notice error" role="alert">{error}</div>}

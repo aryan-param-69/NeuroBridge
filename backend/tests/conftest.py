@@ -1,6 +1,7 @@
 import os
 
 os.environ["ENVIRONMENT"] = "test"
+os.environ["RATE_LIMIT_ENABLED"] = "false"  # the suite logs in hundreds of times from one address; test_ops_security.py turns it on explicitly
 # Tests run against a REAL MongoDB, in a database that is dropped before every test.
 os.environ["MONGO_DB"] = "neurobridge_test"
 os.environ.setdefault("MONGO_URL", "mongodb://localhost:27017")

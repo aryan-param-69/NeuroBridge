@@ -1,0 +1,28 @@
+# Production-style HTTPS. Use together with the main file:
+#   docker compose -f docker-compose.yml -f docker-compose.tls.yml up -d --build
+# Set in .env: DOMAIN, ENVIRONMENT=production, COOKIE_SECURE=true, CORS_ORIGINS=https://<DOMAIN>, TRUSTED_PROXIES=2 (Caddy + nginx),
+# and real SECRET_KEY / ENCRYPTION_KEY / HMAC_KEY / MONGO_PASSWORD (the API refuses to start in production with unsafe values).
+# Not exercised by the project's tests: Docker was not available on the development machine. Try it on a staging host first.
+services:
+  proxy:
+    image: caddy:2
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddydata:/data
+    depends_on:
+      - frontend
+
+  frontend:
+    ports: !reset []
+
+  api:
+    ports: !reset []
+
+volumes:
+  caddydata:

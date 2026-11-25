@@ -38,7 +38,7 @@ export default function AppShell() {
   return (
     <div className="shell">
       <nav className="sidebar" aria-label="Main navigation">
-        <div className="brand"><div className="brand-mark">NB</div>NeuroBridge</div>
+        <div className="brand"><div className="brand-mark">NT</div>NeuroTrace</div>
         {MAIN.filter((i) => i.to === '/' || hasRole('clinician', 'eeg_technologist', 'viewer', 'researcher')).map((i) => <NavItem key={i.to} item={i} />)}
 
         {hasRole('researcher', 'clinician', 'admin', 'eeg_technologist', 'viewer') && (

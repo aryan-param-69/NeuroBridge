@@ -1,0 +1,94 @@
+{
+ "n_patients": 42,
+ "n_vs": 30,
+ "n_mcs": 12,
+ "diagnoses": {
+  "MCS+": 8,
+  "MCS-": 4,
+  "VS": 30
+ },
+ "excluded": [],
+ "median_hours": 6.0,
+ "median_epochs_kept": 717.5,
+ "features": [
+  "rel_delta",
+  "rel_theta",
+  "rel_alpha",
+  "rel_beta",
+  "spectral_entropy",
+  "perm_entropy",
+  "slope",
+  "hjorth_mobility",
+  "hjorth_complexity",
+  "alpha_over_delta",
+  "frontal_minus_occipital_alpha",
+  "wpli_delta",
+  "wpli_theta",
+  "wpli_alpha"
+ ],
+ "primary": {
+  "auc": 0.5555555555555556,
+  "auc_ci95": [
+   0.3583035714285714,
+   0.7527864583333332
+  ],
+  "balanced_accuracy": 0.575,
+  "sensitivity_mcs": 0.5833333333333334,
+  "specificity_vs": 0.5666666666666667,
+  "ba_ci95": [
+   0.4134203498114788,
+   0.7449044225461444
+  ],
+  "perm_p": 0.31868131868131866,
+  "perm_null_mean_auc": 0.4798333333333334
+ },
+ "sensitivity_low_delta": {
+  "auc": 0.6,
+  "auc_ci95": [
+   0.3972560903149139,
+   0.7827229282067992
+  ],
+  "balanced_accuracy": 0.5916666666666667,
+  "sensitivity_mcs": 0.5833333333333334,
+  "specificity_vs": 0.6,
+  "ba_ci95": [
+   0.41104910714285714,
+   0.7555739893211287
+  ],
+  "perm_p": 0.19880119880119881,
+  "perm_null_mean_auc": 0.47151944444444444
+ },
+ "univariate_auc_mcs_higher": {
+  "rel_delta": 0.6611111111111111,
+  "rel_theta": 0.6611111111111111,
+  "rel_alpha": 0.35000000000000003,
+  "rel_beta": 0.3555555555555555,
+  "spectral_entropy": 0.36388888888888893,
+  "perm_entropy": 0.39444444444444443,
+  "slope": 0.28888888888888886,
+  "hjorth_mobility": 0.3638888888888889,
+  "hjorth_complexity": 0.6333333333333333,
+  "alpha_over_delta": 0.32222222222222224,
+  "frontal_minus_occipital_alpha": 0.5,
+  "wpli_delta": 0.6083333333333334,
+  "wpli_theta": 0.6027777777777777,
+  "wpli_alpha": 0.5777777777777778
+ },
+ "primary_without_top_feature": {
+  "dropped": "slope",
+  "auc": 0.5361111111111111,
+  "auc_ci95": [
+   0.33950670498084295,
+   0.7243439164522114
+  ],
+  "balanced_accuracy": 0.5916666666666667,
+  "sensitivity_mcs": 0.5833333333333334,
+  "specificity_vs": 0.6,
+  "ba_ci95": [
+   0.4243222768222768,
+   0.7575946969696968
+  ],
+  "perm_p": 0.3596403596403596,
+  "perm_null_mean_auc": 0.4724194444444445
+ }
+}
