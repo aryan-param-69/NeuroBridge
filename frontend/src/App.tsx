@@ -15,6 +15,7 @@ import ComparisonsHome from './pages/comparisons/ComparisonsHome'
 import ReportPage from './pages/reports/ReportPage'
 import ReportsHome from './pages/reports/ReportsHome'
 import RecordingsOverview from './pages/RecordingsOverview'
+import Users from './pages/Users'
 import PatientProfile from './pages/patients/PatientProfile'
 import RecordingViewer from './pages/recordings/RecordingViewer'
 import UploadRecording from './pages/recordings/UploadRecording'
@@ -53,6 +54,7 @@ export default function App() {
         <Route path="assessments/:id" element={<Protected roles={['clinician', 'eeg_technologist', 'viewer']}><AssessmentPage /></Protected>} />
         <Route path="runs/:id/analysis" element={<Protected roles={['clinician', 'eeg_technologist', 'viewer']}><Suspense fallback={<p className="muted">Loading…</p>}><AnalysisPage /></Suspense></Protected>} />
         <Route path="admin/audit" element={<Protected roles={['admin']}><AuditLog /></Protected>} />
+        <Route path="admin/users" element={<Protected roles={['admin']}><Users /></Protected>} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

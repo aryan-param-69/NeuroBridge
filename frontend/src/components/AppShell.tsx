@@ -1,6 +1,6 @@
 import {
   BarChart3, ClipboardList, FileText, FlaskConical, GitCompare, LayoutDashboard, ScrollText,
-  Users, Waves, type LucideIcon,
+  UserCog, Users, Waves, type LucideIcon,
 } from 'lucide-react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext'
@@ -50,6 +50,7 @@ export default function AppShell() {
         {hasRole('admin') && (
           <>
             <div className="nav-section">Administration</div>
+            <NavItem item={{ to: '/admin/users', label: 'Users', icon: UserCog, ready: true }} />
             <NavItem item={{ to: '/admin/audit', label: 'Audit log', icon: ScrollText, ready: true }} />
             <NavItem item={{ to: '/admin/settings', label: 'Settings', icon: BarChart3, ready: false }} />
           </>

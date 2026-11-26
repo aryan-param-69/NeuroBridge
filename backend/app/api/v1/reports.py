@@ -35,7 +35,7 @@ LIMITATIONS = [
     "EEG features were computed by a versioned, automated pipeline after quality control; interpretation belongs to the responsible clinician.",
     "The CRS-R categories shown are those entered by the assessing clinician. The platform never assigns a category.",
     "Differences between recordings can arise from sedation, recording condition, quality or time of day rather than from the patient's brain; context differences are listed where present.",
-    "The sedation-level model was trained on 3,594 ten-second EEG windows (about 10 hours) from 131 recordings of 40 healthy volunteers at two laboratories and tested on people it had never seen (balanced accuracy 0.97); patient validation is the next stage, so its output is research decision support only.",
+    "The sedation-level model was trained on 2,814 ten-second EEG windows (about 8 hours) from 131 recordings of 40 healthy volunteers at two laboratories and tested on people it had never seen (balanced accuracy 0.97); patient validation is the next stage, so its output is research decision support only.",
     "Motor-imagery or sedation classifiers are not consciousness or covert-awareness detectors.",
 ]
 
